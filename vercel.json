@@ -1,5 +1,7 @@
 {
-  "version": 2,
-  "public": true,
-  "name": "portafolio-ods12"
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "github": {
+    "enabled": false
+  }
 }
