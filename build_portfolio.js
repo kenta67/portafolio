@@ -1,65 +1,21 @@
 const fs = require('fs');
 
-const pages = [
-  { file: 'index.html', title: '1. Inicio', icon: 'fa-home' },
-  { file: 'problema.html', title: '2. El problema', icon: 'fa-exclamation-triangle' },
-  { file: 'investigacion.html', title: '3. Investigación', icon: 'fa-search' },
-  { file: 'propuesta.html', title: '4. Propuesta', icon: 'fa-lightbulb' },
-  { file: 'metodologia.html', title: '5. Metodología', icon: 'fa-cogs' },
-  { file: 'arquitectura.html', title: '6. Arquitectura', icon: 'fa-sitemap' },
-  { file: 'c4model.html', title: '7. C4 Model', icon: 'fa-cubes' },
-  { file: 'prototipo.html', title: '8. Prototipo', icon: 'fa-mobile-alt' },
-  { file: 'implementacion.html', title: '9. Implementación', icon: 'fa-laptop-code' },
-  { file: 'resultados.html', title: '10. Resultados', icon: 'fa-chart-line' },
-  { file: 'evidencias.html', title: '11. Evidencias', icon: 'fa-folder-open' }
+const sections = [
+  { id: 'inicio', title: '1. Inicio', icon: 'fa-home', contentKey: 'inicio' },
+  { id: 'problema', title: '2. El problema', icon: 'fa-exclamation-triangle', contentKey: 'problema' },
+  { id: 'investigacion', title: '3. Investigación', icon: 'fa-search', contentKey: 'investigacion' },
+  { id: 'propuesta', title: '4. Propuesta', icon: 'fa-lightbulb', contentKey: 'propuesta' },
+  { id: 'metodologia', title: '5. Metodología', icon: 'fa-cogs', contentKey: 'metodologia' },
+  { id: 'arquitectura', title: '6. Arquitectura', icon: 'fa-sitemap', contentKey: 'arquitectura' },
+  { id: 'c4model', title: '7. C4 Model', icon: 'fa-cubes', contentKey: 'c4model' },
+  { id: 'prototipo', title: '8. Prototipo', icon: 'fa-mobile-alt', contentKey: 'prototipo' },
+  { id: 'implementacion', title: '9. Implementación', icon: 'fa-laptop-code', contentKey: 'implementacion' },
+  { id: 'resultados', title: '10. Resultados', icon: 'fa-chart-line', contentKey: 'resultados' },
+  { id: 'evidencias', title: '11. Evidencias', icon: 'fa-folder-open', contentKey: 'evidencias' }
 ];
 
-function generateNav(activeFile) {
-  return pages.map(p => `                <li><a href="${p.file}" class="${p.file === activeFile ? 'active' : ''}"><i class="fas ${p.icon}"></i> ${p.title}</a></li>`).join('\n');
-}
-
-function template(title, activeFile, content) {
-  return `<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${title} | Portafolio Digital - ODS 12</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <div class="app-container">
-        <!-- Sidebar Navigation -->
-        <nav class="sidebar">
-            <div class="sidebar-header">
-                <h2>ODS 12<span>.</span></h2>
-                <p>Consumo y Producción</p>
-            </div>
-            <ul class="nav-links">
-${generateNav(activeFile)}
-            </ul>
-        </nav>
-
-        <!-- Main Content -->
-        <main class="content-area">
-            <section class="page-section active" style="display: block;">
-${content}
-            </section>
-        </main>
-    </div>
-    <script src="js/app.js"></script>
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({ startOnLoad: true, theme: 'default' });
-    </script>
-</body>
-</html>`;
-}
-
 const contents = {
-  'index.html': `
+  inicio: `
                 <div class="header-banner">
                     <span class="badge">ODS 12: Producción y Consumo Responsables</span>
                     <h1>Red Social de Rescate Alimentario</h1>
@@ -112,14 +68,14 @@ const contents = {
                     </div>
                 </div>
   `,
-  'problema.html': `
+  problema: `
                 <h2 class="section-title">FASE 1: El Problema y Validación</h2>
                 <div class="problem-container">
-                    <div class="problem-context card">
+                    <div class="problem-context card" style="margin-bottom: 2rem;">
                         <h3><i class="fas fa-map-marker-alt"></i> Contexto</h3>
                         <p>Grandes supermercados (como Supermall) que manejan un alto volumen de productos perecederos diariamente.</p>
                     </div>
-                    <div class="problem-statement card danger-border">
+                    <div class="problem-statement card danger-border" style="margin-bottom: 2rem;">
                         <h3><i class="fas fa-bullseye"></i> Problema Identificado</h3>
                         <p>Las empresas <strong>no tienen una manera rápida y efectiva de publicar y vender sus productos a punto de vencer</strong>. Esto resulta en pérdida total económica y daño medioambiental (ODS 12).</p>
                     </div>
@@ -136,152 +92,231 @@ const contents = {
                     </div>
                 </div>
   `,
-  'investigacion.html': `
+  investigacion: `
                 <h2 class="section-title">FASE 2: Requerimientos</h2>
                 <div class="grid-2-col req-grid">
                     <div class="card req-card">
                         <div class="req-header func">
-                            <h3>Requerimientos Funcionales</h3>
+                            <h3><i class="fas fa-check-square"></i> Funcionales</h3>
                         </div>
                         <ul class="custom-list">
-                            <li><strong>Gestión de Empresas:</strong> Crear perfiles, publicar productos, fijar descuento y fecha de caducidad.</li>
-                            <li><strong>Feed de Ofertas:</strong> Mostrar ofertas a clientes locales ordenadas por cercanía o mayor descuento.</li>
-                            <li><strong>Comparador:</strong> Permitir a los clientes comparar precios entre tiendas competidoras.</li>
-                            <li><strong>Reserva:</strong> Los clientes pueden apartar el producto para recogerlo y pagarlo en tienda (Click & Collect).</li>
+                            <li><strong>Gestión:</strong> Crear perfiles, publicar productos, fijar descuento y caducidad.</li>
+                            <li><strong>Feed:</strong> Mostrar ofertas a clientes ordenadas por cercanía o descuento.</li>
+                            <li><strong>Comparador:</strong> Comparar precios entre tiendas competidoras.</li>
+                            <li><strong>Reserva:</strong> Apartar producto para recoger en tienda (Click & Collect).</li>
                         </ul>
                     </div>
                     <div class="card req-card">
                         <div class="req-header non-func">
-                            <h3>Requerimientos No Funcionales</h3>
+                            <h3><i class="fas fa-tachometer-alt"></i> No Funcionales</h3>
                         </div>
                         <ul class="custom-list">
-                            <li><strong>Disponibilidad:</strong> Enfoque Mobile-first, alta disponibilidad 24/7.</li>
-                            <li><strong>Rendimiento:</strong> Tiempo de respuesta del feed menor a 2 segundos para actualizaciones en tiempo real.</li>
-                            <li><strong>Facilidad de uso:</strong> Interfaz tipo red social, publicación en menos de 3 clics.</li>
-                            <li><strong>Seguridad:</strong> Autenticación segura y validación de perfiles de empresas.</li>
-                            <li><strong>Escalabilidad:</strong> Arquitectura capaz de soportar picos de tráfico en horas de cierre de tiendas.</li>
+                            <li><strong>Disponibilidad:</strong> Enfoque Mobile-first, alta disponibilidad.</li>
+                            <li><strong>Rendimiento:</strong> Tiempo de respuesta < 2s para el feed en tiempo real.</li>
+                            <li><strong>UX:</strong> Interfaz tipo red social, publicación en 3 clics.</li>
+                            <li><strong>Seguridad:</strong> Autenticación segura de empresas.</li>
+                            <li><strong>Escalabilidad:</strong> Soporte para picos de tráfico en horas de cierre.</li>
                         </ul>
                     </div>
                 </div>
   `,
-  'propuesta.html': `
+  propuesta: `
                 <h2 class="section-title">FASE 3: Propuesta Innovadora</h2>
                 <div class="card-grid">
                     <div class="card">
-                        <h3>¿Qué problema resuelve y para quién?</h3>
-                        <p>Resuelve el desperdicio de alimentos perecederos en supermercados por falta de canales de liquidación rápida. Beneficia a las empresas (recuperan costos) y a consumidores (ahorran dinero).</p>
+                        <h3><i class="fas fa-question-circle"></i> ¿Qué resuelve?</h3>
+                        <p>Resuelve el desperdicio de alimentos en supermercados por falta de canales de liquidación. Beneficia a empresas (recuperan costos) y consumidores (ahorran).</p>
                     </div>
                     <div class="card">
-                        <h3>¿Cómo lo resuelve y qué innovación tiene?</h3>
-                        <p>Mediante una plataforma estilo "red social" geolocalizada enfocada exclusivamente en productos a punto de vencer. La innovación radica en fomentar una sana competencia pública entre supermercados por liquidar su stock.</p>
+                        <h3><i class="fas fa-lightbulb"></i> Innovación</h3>
+                        <p>Plataforma estilo "red social" geolocalizada. Fomenta competencia pública entre supermercados por liquidar su stock antes de que caduque.</p>
                     </div>
                     <div class="card">
-                        <h3>Información y Decisiones</h3>
-                        <p>Utiliza inventarios, fechas de caducidad y ubicación. Permite a las empresas decidir márgenes de liquidación en tiempo real y a los clientes decidir su compra basada en la mejor oferta.</p>
+                        <h3><i class="fas fa-database"></i> Información</h3>
+                        <p>Utiliza inventarios, fechas de caducidad y ubicación. Empresas deciden márgenes; clientes deciden compra basada en la mejor oferta.</p>
                     </div>
                     <div class="card">
-                        <h3>Beneficio ODS 12 y Modelo de Negocio</h3>
-                        <p><strong>ODS 12:</strong> Reduce directamente la huella de carbono y el desperdicio alimentario. <strong>Negocio:</strong> Modelo Freemium con suscripción para supermercados o cobro de una pequeña comisión por reserva exitosa (lead generation).</p>
+                        <h3><i class="fas fa-leaf"></i> Impacto ODS 12</h3>
+                        <p>Reduce directamente la huella de carbono y el desperdicio alimentario. Modelo de negocio Freemium o por comisión por reserva exitosa.</p>
                     </div>
                 </div>
   `,
-  'metodologia.html': `
+  metodologia: `
                 <h2 class="section-title">FASE 4: Metodología de Desarrollo</h2>
                 <div class="card">
-                    <h3>Selección: Scrum (Metodología Ágil)</h3>
-                    <p>Utilizando el modelo de equilibrio de Boehm y Turner, determinamos que una metodología ágil es la adecuada para este proyecto.</p>
+                    <h3><i class="fas fa-project-diagram"></i> Selección: Scrum (Ágil)</h3>
+                    <p>Aplicando el modelo de Boehm y Turner, optamos por Scrum.</p>
                     
-                    <h4 style="margin-top:1.5rem">Características y Justificación</h4>
-                    <ul>
-                        <li><strong>Tamaño del equipo:</strong> Pequeño (3 integrantes), lo que favorece la comunicación directa de Scrum.</li>
-                        <li><strong>Criticidad:</strong> Baja criticidad en pérdida de vidas (no es software médico), lo que permite iteraciones rápidas y despliegues continuos sin burocracia extrema.</li>
-                        <li><strong>Dinamismo:</strong> Requisitos cambiantes por ser una propuesta innovadora y de mercado nuevo.</li>
+                    <h4 style="margin-top:1.5rem">Justificación</h4>
+                    <ul class="custom-list">
+                        <li><strong>Equipo Pequeño:</strong> 3 integrantes; ideal para agilidad.</li>
+                        <li><strong>Criticidad Baja:</strong> No compromete vidas humanas; permite iteraciones de software rápidas.</li>
+                        <li><strong>Dinamismo:</strong> Requisitos variables debido a que es un nuevo modelo de mercado.</li>
                     </ul>
 
-                    <h4 style="margin-top:1.5rem">Ventajas y Limitaciones</h4>
-                    <p><strong>Ventajas:</strong> Entregas de valor constantes, adaptabilidad a la respuesta de los usuarios, validación temprana del prototipo.</p>
-                    <p><strong>Limitaciones:</strong> Requiere alto compromiso, autogestión y disponibilidad de los miembros del equipo para los Daily Sprints y Reviews.</p>
-
-                    <h4 style="margin-top:1.5rem">Aplicación</h4>
-                    <p>Se trabajará en <strong>Sprints de 2 semanas</strong>, comenzando con el Backlog priorizando el registro y feed de ofertas (MVP). Se realizarán reuniones de planificación, dailies cortas y retrospectivas.</p>
+                    <h4 style="margin-top:1.5rem">Ventajas y Aplicación</h4>
+                    <p><strong>Ventajas:</strong> Entregas de valor constantes, validación temprana con el usuario final.</p>
+                    <p><strong>Aplicación:</strong> Sprints de 2 semanas, dailies cortas, y priorización orientada al MVP (Registro + Feed de ofertas).</p>
                 </div>
   `,
-  'arquitectura.html': `
+  arquitectura: `
                 <h2 class="section-title">FASE 5: Arquitectura de Software</h2>
                 <div class="card">
-                    <h3>Selección: Arquitectura de Tres Capas (Three-Tier)</h3>
-                    <p>Para la Red Social de Rescate Alimentario, se ha seleccionado un patrón de arquitectura de 3 capas (Presentación, Lógica de Negocio y Acceso a Datos).</p>
+                    <h3><i class="fas fa-layer-group"></i> Tres Capas (Three-Tier)</h3>
+                    <p>Se ha seleccionado un patrón de arquitectura de 3 capas (Presentación, Lógica de Negocio y Acceso a Datos).</p>
                     
-                    <h4 style="margin-top:1.5rem">Justificación de la Selección</h4>
-                    <ul>
-                        <li><strong>Separación de Responsabilidades:</strong> Facilita que miembros del equipo trabajen independientemente en el frontend y el backend.</li>
-                        <li><strong>Escalabilidad:</strong> El volumen de información del "feed" y consultas concurrentes requiere que el servidor web/API pueda escalar independientemente de la base de datos.</li>
-                        <li><strong>Mantenimiento:</strong> Las reglas de liquidación y reservas están centralizadas en la capa de lógica, evitando que cambien si se migra de Web a App móvil nativa.</li>
-                        <li><strong>Seguridad:</strong> La capa de datos no está expuesta directamente; todas las peticiones de reserva pasan por validaciones de la capa lógica.</li>
+                    <h4 style="margin-top:1.5rem">Justificación</h4>
+                    <ul class="custom-list">
+                        <li><strong>Separación:</strong> Facilita el trabajo independiente en frontend y backend.</li>
+                        <li><strong>Escalabilidad:</strong> El backend puede escalar ante alto volumen de lecturas en el Feed sin sobrecargar la base de datos de manera monolítica.</li>
+                        <li><strong>Seguridad:</strong> Oculta la base de datos detrás de la capa de API REST.</li>
                     </ul>
                 </div>
   `,
-  'c4model.html': `
-                <h2 class="section-title">FASE 6: Modelado de la Arquitectura con C4</h2>
+  c4model: `
+                <h2 class="section-title">FASE 6: C4 Model</h2>
                 <div class="card" style="margin-bottom: 2rem;">
                     <h3>C4 - Nivel 1: System Context</h3>
                     <pre class="mermaid" style="text-align: center;">
 graph TD
-    User(Cliente / Consumidor) -->|Consulta ofertas y reserva| System(Red Social de Rescate)
-    Supermercado(Empresa / Supermercado) -->|Publica productos a punto de vencer| System
-    System -->|Envía notificaciones| Push(Servicio de Notificaciones)
+    User(Consumidor) -->|Consulta y reserva| System(Red Social Rescate)
+    Market(Supermercado) -->|Publica productos| System
+    System -->|Notificaciones| Push(Servicio Push)
                     </pre>
                 </div>
-                
                 <div class="card">
                     <h3>C4 - Nivel 2: Container</h3>
                     <pre class="mermaid" style="text-align: center;">
 graph TD
-    Client(Web App / Mobile SPA<br/>HTML/CSS/JS) -->|REST API calls| API(Backend API<br/>Node.js/Express)
-    Admin(Dashboard Supermercado<br/>React/Web) -->|REST API calls| API
-    API -->|Read/Write Data| DB[(Base de Datos<br/>PostgreSQL)]
+    Client(SPA Frontend) -->|REST API| API(Backend Node API)
+    Admin(Panel Supermercado) -->|REST API| API
+    API -->|SQL| DB[(PostgreSQL)]
                     </pre>
                 </div>
   `,
-  'prototipo.html': `
+  prototipo: `
                 <h2 class="section-title">FASE 7: Prototipo</h2>
                 <div class="card">
-                    <h3>Prototipo de Interfaz</h3>
-                    <p>El prototipo incluye las vistas principales para cumplir con los flujos requeridos:</p>
-                    <ul>
-                        <li><strong>Feed Principal:</strong> Vista de tarjetas con fotos de productos, precio original vs precio de liquidación, y botón "Reservar".</li>
-                        <li><strong>Panel de Empresa:</strong> Formulario rápido para publicar un producto subiendo foto, fecha y stock.</li>
-                        <li><strong>Comparador:</strong> Vista en mapa/lista de comercios cercanos.</li>
+                    <h3><i class="fas fa-object-group"></i> Interfaces Diseñadas</h3>
+                    <p>El prototipo engloba las funcionalidades core del MVP:</p>
+                    <ul class="custom-list">
+                        <li><strong>Feed Principal:</strong> Tarjetas con imagen, descuento resaltado, y botón de Reserva rápida.</li>
+                        <li><strong>Panel Empresa:</strong> Publicación en 3 clics con subida de foto y selector de caducidad.</li>
                     </ul>
-                    <div style="text-align: center; margin-top: 2rem; opacity: 0.7;">
-                        <i class="fas fa-mobile-alt fa-5x"></i>
-                        <p style="margin-top: 1rem;">(Aquí se incrustarán capturas de Figma o wireframes interactivos)</p>
+                    <div style="text-align: center; margin-top: 2rem; opacity: 0.5;">
+                        <i class="fas fa-mobile-alt fa-4x"></i>
                     </div>
                 </div>
   `,
-  'implementacion.html': `
-                <h2 class="section-title">FASE 7: Implementación Real de la Arquitectura</h2>
+  implementacion: `
+                <h2 class="section-title">FASE 7: Implementación</h2>
                 <div class="card">
-                    <h3>Módulos Funcionales Implementados</h3>
-                    <p>En cumplimiento con la arquitectura de 3 capas propuesta, se ha desarrollado el flujo principal:</p>
-                    
-                    <h4 style="margin-top:1.5rem">1. Módulo de Autenticación y Perfiles</h4>
-                    <p>La <strong>Capa de Presentación</strong> interactúa con la <strong>Capa de Lógica</strong> (API REST) para registrar comercios y usuarios, almacenando las credenciales de forma segura en la <strong>Capa de Datos</strong>.</p>
-                    
-                    <h4 style="margin-top:1.5rem">2. Módulo de Publicación y Feed de Ofertas</h4>
-                    <p><strong>Flujo demostrado:</strong> El supermercado ingresa a su panel y publica una oferta de lácteos a mitad de precio. La API recibe el request, lo guarda en la base de datos, y automáticamente el Frontend del Cliente al recargar muestra el nuevo producto en primera posición en el Feed de "Ofertas Urgentes".</p>
-                    
-                    <div style="padding: 1rem; background: var(--bg-sidebar); border-radius: var(--radius-md); margin-top: 1.5rem; border-left: 4px solid var(--primary-color);">
-                        <i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>Evidencia de Ejecución:</strong> Los códigos fuente y los endpoints funcionales serán mostrados en vivo durante la presentación final para verificar la separación de capas MVC/Tres Niveles.
-                    </div>
+                    <h3><i class="fas fa-code"></i> Módulos Desarrollados</h3>
+                    <h4 style="margin-top:1.5rem">1. Autenticación</h4>
+                    <p>Integración de Presentación con la Lógica para inicio de sesión seguro de supermercados y consumidores.</p>
+                    <h4 style="margin-top:1.5rem">2. Publicación de Ofertas (El Feed)</h4>
+                    <p>Demostración completa del flujo de las Tres Capas: El comercio publica, la API lo almacena y el Frontend lo muestra en el primer lugar del Feed al cliente.</p>
                 </div>
   `,
-  'resultados.html': `<h2 class="section-title">10. Resultados y Conclusiones</h2><div class="card"><p>El modelo resulta altamente viable y conecta una necesidad comercial con una responsabilidad medioambiental, probando el impacto directo en el ODS 12.</p></div>`,
-  'evidencias.html': `<h2 class="section-title">11. Evidencias del Proceso</h2><div class="card"><p>Repositorios, actas de reuniones, fotografías de entrevistas a gerentes de Supermall y planificación del backlog.</p></div>`
+  resultados: `
+                <h2 class="section-title">10. Resultados</h2>
+                <div class="card"><p>El modelo es altamente viable y conecta una necesidad comercial con el ODS 12 de forma directa.</p></div>
+  `,
+  evidencias: `
+                <h2 class="section-title">11. Evidencias</h2>
+                <div class="card"><p>Repositorios, entrevistas de validación y planificación en Trello/Jira adjuntas.</p></div>
+  `
 };
 
-for (const p of pages) {
-  fs.writeFileSync(p.file, template(p.title, p.file, contents[p.file]), 'utf8');
+const navHtml = sections.map(s => 
+  `                <li><a href="#${s.id}" class="nav-link"><i class="fas ${s.icon}"></i> ${s.title}</a></li>`
+).join('\n');
+
+const sectionsHtml = sections.map(s => 
+  `            <section id="${s.id}" class="page-section">
+${contents[s.contentKey]}
+            </section>`
+).join('\n\n');
+
+const fullHtml = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital - ODS 12</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-section { min-height: 50vh; margin-bottom: 4rem; padding-top: 2rem; }
+        .nav-link.active { background-color: var(--primary) !important; color: white !important; }
+        .nav-link.active i { color: white !important; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation (Scrollspy) -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>ODS 12<span>.</span></h2>
+                <p>Consumo y Producción</p>
+            </div>
+            <ul class="nav-links" id="sidebar-nav">
+${navHtml}
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content-area">
+${sectionsHtml}
+        </main>
+    </div>
+
+    <!-- ScrollSpy Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.page-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { primaryColor: '#10b981', primaryTextColor: '#fff', primaryBorderColor: '#059669', lineColor: '#64748b', textColor: '#1e293b' } });
+    </script>
+</body>
+</html>`;
+
+fs.writeFileSync('index.html', fullHtml, 'utf8');
+
+// Optional: remove old html files since it's a single page app now
+const toRemove = ['problema.html', 'investigacion.html', 'propuesta.html', 'metodologia.html', 'arquitectura.html', 'c4model.html', 'prototipo.html', 'implementacion.html', 'resultados.html', 'evidencias.html'];
+for(let f of toRemove) {
+  if (fs.existsSync(f)) {
+    fs.unlinkSync(f);
+  }
 }
 
-console.log("Portfolio completely generated up to Phase 7!");
+console.log("Single page portfolio built perfectly.");
