@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+const fs = require('fs');
+
+const head = `<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -58,7 +60,9 @@
         </div>
     </nav>
     <main class="flex-grow max-w-6xl mx-auto w-full px-6">
+`;
 
+const sections = `
         <section id="p1" class="pagina text-center">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700 text-sm mb-8 mt-10">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> ODS 12
@@ -189,4 +193,7 @@ graph TD
         secciones.forEach(s => observer.observe(s));
     </script>
 </body>
-</html>
+</html>`;
+
+fs.writeFileSync('C:/Users/kenta/Desktop/portafolio/index.html', head + sections, 'utf8');
+console.log('Final generated successfully.');

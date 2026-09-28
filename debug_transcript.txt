@@ -1,0 +1,158 @@
+USER INPUT:\n<USER_REQUEST>
+implemeta estos estilos y las graficas de como se esta echo man todo igual la face 1 ya de la face dos ve cambian por diferentes tipos de tipologias arquitecturas que todo ve vea iguna que el html que te e pasado implememtalos detalladamaneta como esta 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-28T17:09:01-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+Cursor is on line: 3\n\nUSER INPUT:\n<USER_REQUEST>
+qu toda la pagina se vea de manera deslisable no que este separdo  como esta  y que este sea mas profecional revisalo 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-28T15:50:54-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+Cursor is on line: 50
+Other open documents:
+- c:\Users\kenta\Desktop\portafolio\vercel.json (LANGUAGE_JSON)
+- c:\Users\kenta\Desktop\portafolio\css\style.c\n\nUSER INPUT:\n<USER_REQUEST>
+los stylo se ven de una marena horrible arreglas los styloa 
+
+que sestose vean de una manera mas profecional 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-28T15:43:56-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+Cursor is on line: 50
+Other open documents:
+- c:\Users\kenta\Desktop\portafolio\generate.js (LANGUAGE_JAVASCRIPT)
+- c:\Users\kenta\Desktop\portafolio\index.html (LA\n\nUSER INPUT:\n<USER_REQUEST>
+no se ven los cambios que se as implementa revisalos mas a profundidad 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-28T15:41:12-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+Cursor is on line: 50
+Other open documents:
+- c:\Users\kenta\Desktop\portafolio\generate.js (LANGUAGE_JAVASCRIPT)
+- c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+- c:\Users\kenta\Desktop\\n\nUSER INPUT:\n<USER_REQUEST>
+
+TERMINALO HASTA LA FASE 7 REGIN LO QUE YA ESTA IMPLEMEMTADO EN LA PAGINA 
+
+FASE 1 · Identificación y validación del problemaCada grupo deberá seleccionar un contexto real donde pueda existir un problema relacionado con el ODS 12. Ejemplos: institución educativa, restaurante, cafetería, mercado, pequeña empresa, emprendimiento, institución pública, organización social, comercio, universidad, comunidad.
+El problema debe ser específico, observable y delimitado.
+❌ No es suficiente: "\n\nUSER INPUT:\n<USER_REQUEST>
+me sale esto al monemtode publicar 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-23T17:48:44-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+Cursor is on line: 14
+Other open documents:
+- c:\Users\kenta\Desktop\portafolio\generate.js (LANGUAGE_JAVASCRIPT)
+- c:\Users\kenta\Desktop\portafolio\css\style.css (LANGUAGE_CSS)
+- c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HT\n\nUSER INPUT:\n<USER_REQUEST>
+revisa que este se pueda publicar en verce demanera facil
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-23T17:47:50-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+Cursor is on line: 14
+Other open documents:
+- c:\Users\kenta\Desktop\portafolio\generate.js (LANGUAGE_JAVASCRIPT)
+- c:\Users\kenta\Desktop\portafolio\css\style.css (LANGUAGE_CSS)
+- c:\Users\kenta\Desktop\portafolio\i\n\nUSER INPUT:\n<USER_REQUEST>
+sigue se ve viendo de esa manera quiero que se vea omo una una pagina que se valla desplegando hacia abajo reacelo todo 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-23T17:41:27-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\vercel.json (LANGUAGE_JSON)
+Cursor is on line: 1
+Other open documents:
+- c:\Users\kenta\Desktop\portafolio\generate.js (LANGUAGE_JAVASCRIPT)
+- c:\Users\kenta\Desktop\portafolio\ind\n\nUSER INPUT:\n<USER_REQUEST>
+no se ven los cambios quela pagina sea una que se valla desplegando hacia abajo 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-23T17:38:41-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\generate.js (LANGUAGE_JAVASCRIPT)
+Cursor is on line: 1
+Other open documents:
+- c:\Users\kenta\Desktop\portafolio\generate.js (LANGUAGE_JAVASCRIPT)
+- c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+</ADDITION\n\nUSER INPUT:\n<USER_REQUEST>
+para todo la pagina no lo para el index modificao todo para que se vea todo los puntos para ir bajando todo hacia abajo 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-23T17:36:24-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+Cursor is on line: 106
+Other open documents:
+- c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+- c:\Users\kenta\Desktop\portafolio\css\style\n\nUSER INPUT:\n<USER_REQUEST>
+la pagian que se vea como en la fono te todo se valla desplegando hacia abajo 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-23T17:33:52-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+Cursor is on line: 101
+Other open documents:
+- c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+</ADDITIONAL_METADATA>\n\nUSER INPUT:\n<USER_REQUEST>
+implementa un apartado pa ra la idea del proyecto qte este valla evolucionando 
+
+que sea interactiva que 
+la primeraidea sea de 
+
+El Origen: Un puente caritativo
+La idea nació proponiendo crear un sitio benéfico donde organizaciones (asilos, orfanatos) pudieran solicitar productos próximos a vencer publicados directamente por grandes empresas (como supermercados), actuando únicamente como un puente de donación.
+
+la segunda idea era que este sistemas solo iav a ser para las organi\n\nUSER INPUT:\n<USER_REQUEST>
+la problematica inicial es que en las empresas como la supermoll no tiene donde publicar sus productoa=s que estan a punto de vencer no tienen una manera rapida de vencer estos producto que estan a punto de vencer  se quire dicenar una pgin tipo de red social en la que  las empresas como los super van a tener una paltaforma en donde estos puedan publicar sus producto que ya estan a punto de vencer , los clientes van a poder ver los productos que van a tener los descuentos y los cl\n\nUSER INPUT:\n<USER_REQUEST>
+las paginas que este separadas que no este todo en html
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-23T17:04:47-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+Cursor is on line: 35
+Other open documents:
+- c:\Users\kenta\Desktop\portafolio\index.html (LANGUAGE_HTML)
+- c:\Users\kenta\Desktop\portafolio\css\style.css (LANGUAGE_CSS)
+- c:\Users\kenta\Desktop\portafolio\js\app.js \n\nUSER INPUT:\n<USER_REQUEST>
+este edbe de tener estes  11 punto la pagina 
+
+por el momento soloodisena las paginas 1 2 3 y 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-23T17:01:05-04:00.
+</ADDITIONAL_METADATA>\n\nUSER INPUT:\n<USER_REQUEST>
+gener un portafolo siguiendo las indicaciones que se construya en html css y js que la ppagina se didactica 
+genera toda la pagina y que este se pueda subier en vercel  genera todas las carpetas nesesarioa para  genera el proyecto 
+
+FASE 1 · Identificación y validación del problemaCada grupo deberá seleccionar un contexto real donde pueda existir un problema relacionado con el ODS 12. Ejemplos: institución educativa, restaurante, cafetería, mercado, pequeña empresa, emprendimiento\n\nUSER INPUT:\n<USER_REQUEST>
+gener un portafolo siguiendo las indicaciones que se construya en html css y js que la ppagina se didactica 
+
+
+FASE 1 · Identificación y validación del problemaCada grupo deberá seleccionar un contexto real donde pueda existir un problema relacionado con el ODS 12. Ejemplos: institución educativa, restaurante, cafetería, mercado, pequeña empresa, emprendimiento, institución pública, organización social, comercio, universidad, comunidad.
+El problema debe ser específico, observable \n\n
