@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Investigación | Portafolio Digital - ODS 12</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>ODS 12<span>.</span></h2>
+                <p>Consumo y Producción</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class=""><i class="fas fa-home"></i> 1. Inicio</a></li>
+                <li><a href="problema.html" class=""><i class="fas fa-exclamation-triangle"></i> 2. El problema</a></li>
+                <li><a href="investigacion.html" class="active"><i class="fas fa-search"></i> 3. Investigación</a></li>
+                <li><a href="propuesta.html" class=""><i class="fas fa-lightbulb"></i> 4. Propuesta</a></li>
+                <li><a href="metodologia.html" class=""><i class="fas fa-cogs"></i> 5. Metodología</a></li>
+                <li><a href="arquitectura.html" class=""><i class="fas fa-sitemap"></i> 6. Arquitectura</a></li>
+                <li><a href="c4model.html" class=""><i class="fas fa-cubes"></i> 7. C4 Model</a></li>
+                <li><a href="prototipo.html" class=""><i class="fas fa-mobile-alt"></i> 8. Prototipo</a></li>
+                <li><a href="implementacion.html" class=""><i class="fas fa-laptop-code"></i> 9. Implementación</a></li>
+                <li><a href="resultados.html" class=""><i class="fas fa-chart-line"></i> 10. Resultados</a></li>
+                <li><a href="evidencias.html" class=""><i class="fas fa-folder-open"></i> 11. Evidencias</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            <section class="page-section active" style="display: block;">
+
+                <h2 class="section-title">FASE 2: Requerimientos</h2>
+                <div class="grid-2-col req-grid">
+                    <div class="card req-card">
+                        <div class="req-header func">
+                            <h3>Requerimientos Funcionales</h3>
+                        </div>
+                        <ul class="custom-list">
+                            <li><strong>Gestión de Empresas:</strong> Crear perfiles, publicar productos, fijar descuento y fecha de caducidad.</li>
+                            <li><strong>Feed de Ofertas:</strong> Mostrar ofertas a clientes locales ordenadas por cercanía o mayor descuento.</li>
+                            <li><strong>Comparador:</strong> Permitir a los clientes comparar precios entre tiendas competidoras.</li>
+                            <li><strong>Reserva:</strong> Los clientes pueden apartar el producto para recogerlo y pagarlo en tienda (Click & Collect).</li>
+                        </ul>
+                    </div>
+                    <div class="card req-card">
+                        <div class="req-header non-func">
+                            <h3>Requerimientos No Funcionales</h3>
+                        </div>
+                        <ul class="custom-list">
+                            <li><strong>Disponibilidad:</strong> Enfoque Mobile-first, alta disponibilidad 24/7.</li>
+                            <li><strong>Rendimiento:</strong> Tiempo de respuesta del feed menor a 2 segundos para actualizaciones en tiempo real.</li>
+                            <li><strong>Facilidad de uso:</strong> Interfaz tipo red social, publicación en menos de 3 clics.</li>
+                            <li><strong>Seguridad:</strong> Autenticación segura y validación de perfiles de empresas.</li>
+                            <li><strong>Escalabilidad:</strong> Arquitectura capaz de soportar picos de tráfico en horas de cierre de tiendas.</li>
+                        </ul>
+                    </div>
+                </div>
+  
+            </section>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+</body>
+</html>

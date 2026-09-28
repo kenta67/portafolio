@@ -3,57 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Digital - ODS 12</title>
+    <title>1. Inicio | Portafolio Digital - ODS 12</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Smooth scrolling para anclas */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Las secciones ya no se ocultan, se muestran en bloque con margen */
-        .page-section {
-            display: block !important;
-            margin-bottom: 5rem;
-            padding-top: 2rem; /* Para que al hacer scroll el título no quede pegado arriba */
-        }
-        .section-divider {
-            border: 0;
-            height: 1px;
-            background: var(--border-color);
-            margin: 4rem 0;
-        }
-    </style>
 </head>
 <body>
-    <!-- Top Navbar -->
-    <header class="top-navbar">
-        <div class="logo">
-            <h2>ODS 12<span>.</span></h2>
-        </div>
-        <nav>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>ODS 12<span>.</span></h2>
+                <p>Consumo y Producción</p>
+            </div>
             <ul class="nav-links">
-                <li><a href="#inicio" class="active">Inicio</a></li>
-                <li><a href="#problema">Problema</a></li>
-                <li><a href="#investigacion">Investigación</a></li>
-                <li><a href="#propuesta">Propuesta</a></li>
-                <li><a href="#metodologia">Metodología</a></li>
-                <li><a href="#arquitectura">Arquitectura</a></li>
-                <li><a href="#c4model">C4 Model</a></li>
-                <li><a href="#prototipo">Prototipo</a></li>
-                <li><a href="#implementacion">Implementación</a></li>
-                <li><a href="#resultados">Resultados</a></li>
-                <li><a href="#evidencias">Evidencias</a></li>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> 1. Inicio</a></li>
+                <li><a href="problema.html" class=""><i class="fas fa-exclamation-triangle"></i> 2. El problema</a></li>
+                <li><a href="investigacion.html" class=""><i class="fas fa-search"></i> 3. Investigación</a></li>
+                <li><a href="propuesta.html" class=""><i class="fas fa-lightbulb"></i> 4. Propuesta</a></li>
+                <li><a href="metodologia.html" class=""><i class="fas fa-cogs"></i> 5. Metodología</a></li>
+                <li><a href="arquitectura.html" class=""><i class="fas fa-sitemap"></i> 6. Arquitectura</a></li>
+                <li><a href="c4model.html" class=""><i class="fas fa-cubes"></i> 7. C4 Model</a></li>
+                <li><a href="prototipo.html" class=""><i class="fas fa-mobile-alt"></i> 8. Prototipo</a></li>
+                <li><a href="implementacion.html" class=""><i class="fas fa-laptop-code"></i> 9. Implementación</a></li>
+                <li><a href="resultados.html" class=""><i class="fas fa-chart-line"></i> 10. Resultados</a></li>
+                <li><a href="evidencias.html" class=""><i class="fas fa-folder-open"></i> 11. Evidencias</a></li>
             </ul>
         </nav>
-    </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-            
-            <!-- ===================== SECCIÓN 1: INICIO ===================== -->
-            <section id="inicio" class="page-section">
+        <!-- Main Content -->
+        <main class="content-area">
+            <section class="page-section active" style="display: block;">
+
                 <div class="header-banner">
                     <span class="badge">ODS 12: Producción y Consumo Responsables</span>
                     <h1>Red Social de Rescate Alimentario</h1>
@@ -63,8 +44,7 @@
                 <div class="card-grid">
                     <div class="card info-card">
                         <h3><i class="fas fa-info-circle"></i> Información del Proyecto</h3>
-                        <p><strong>Equipo:</strong> [Nombre del Equipo]</p>
-                        <p><strong>Integrantes:</strong> [Nombre 1], [Nombre 2], [Nombre 3]</p>
+                        <p><strong>Equipo:</strong> THE GORGONITAS</p>
                         <p><strong>Contexto:</strong> Supermercados (como Supermall) y consumidores en busca de ofertas.</p>
                     </div>
                     
@@ -74,227 +54,46 @@
                     </div>
                 </div>
 
-                <!-- Evolución de la Idea (Vertical) -->
                 <div class="vertical-timeline-section">
                     <div class="timeline-header">
                         <h2>La Evolución de la Idea</h2>
                         <p>Del altruismo puro a un modelo de negocio socialmente responsable y sostenible.</p>
                     </div>
-                    
                     <div class="v-timeline">
-                        <!-- Elemento 1 (Izquierda) -->
                         <div class="v-timeline-item left">
                             <div class="v-timeline-dot"></div>
                             <div class="v-timeline-content">
                                 <div class="step-num">1</div>
                                 <h3>El Origen: Un puente caritativo</h3>
-                                <p>La idea inicial fue propuesta por un compañero del equipo: crear un sitio benéfico donde organizaciones (asilos, orfanatos) pudieran solicitar productos próximos a vencer publicados directamente por grandes empresas (como supermercados), actuando únicamente como un puente de donación.</p>
+                                <p>Sitio benéfico para donación directa a orfanatos/asilos.</p>
                             </div>
                         </div>
-                        
-                        <!-- Elemento 2 (Derecha) -->
                         <div class="v-timeline-item right">
                             <div class="v-timeline-dot"></div>
                             <div class="v-timeline-content">
                                 <div class="step-num">2</div>
                                 <h3>El Problema de Validación</h3>
-                                <p>La segunda idea mantenía el sistema solo para organizaciones benéficas. Sin embargo, surgió un gran riesgo: cualquier persona podría ir a reclamar los productos mintiendo que era de una organización benéfica, con el único objetivo de intentar vender estos productos a un mayor precio.</p>
+                                <p>Riesgo de falsas organizaciones benéficas revendiendo productos gratis.</p>
                             </div>
                         </div>
-                        
-                        <!-- Elemento 3 (Izquierda) -->
                         <div class="v-timeline-item left">
                             <div class="v-timeline-dot"></div>
                             <div class="v-timeline-content">
                                 <div class="step-num">3</div>
                                 <h3>La Idea Final</h3>
-                                <p>Al final, para evitar fraudes y maximizar el rescate, se optó por la red social abierta: los supermercados publican los descuentos y el público general compite por comprar dónde más le conviene.</p>
+                                <p>Red social abierta de descuentos: competencia sana y rescate eficiente de alimentos.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="visual-element">
-                    <div class="image-placeholder">
-                        <i class="fas fa-shopping-basket fa-4x"></i>
-                        <p>Interfaz de la App: Feed de Ofertas</p>
-                    </div>
-                </div>
+  
             </section>
-
-            <hr class="section-divider">
-
-            <!-- ===================== SECCIÓN 2: EL PROBLEMA ===================== -->
-            <section id="problema" class="page-section">
-                <h2 class="section-title">2. El Problema</h2>
-                
-                <div class="problem-container">
-                    <div class="problem-context card">
-                        <h3><i class="fas fa-map-marker-alt"></i> Contexto</h3>
-                        <p>Grandes supermercados (como Supermall) que manejan un alto volumen de productos perecederos.</p>
-                    </div>
-
-                    <div class="problem-statement card danger-border">
-                        <h3><i class="fas fa-bullseye"></i> Problema Específico</h3>
-                        <p>Las empresas como Supermall <strong>no tienen una manera rápida y efectiva de publicar y vender sus productos que están a punto de vencer</strong>. Esto resulta en la pérdida total de estos alimentos, en lugar de venderlos con descuento a clientes interesados, generando un impacto económico y medioambiental negativo (alineado al ODS 12).</p>
-                    </div>
-
-                    <div class="grid-2-col">
-                        <div class="card">
-                            <h3><i class="fas fa-users"></i> Afectados</h3>
-                            <ul>
-                                <li><strong>Supermercados:</strong> Pérdida económica por productos no vendidos que caducan.</li>
-                                <li><strong>Medio Ambiente:</strong> Generación innecesaria de residuos orgánicos por alimentos en buen estado que son desechados.</li>
-                                <li><strong>Consumidores:</strong> Pierden la oportunidad de adquirir productos de calidad a menor precio.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="card">
-                            <h3><i class="fas fa-search"></i> Validación del Problema</h3>
-                            <p><strong>Fuente:</strong> Entrevistas con gerentes de sucursales de supermercados locales y clientes frecuentes.</p>
-                            <p><strong>Método:</strong> Encuestas de interés de compra y observación de protocolos de merma.</p>
-                            <div class="evidence-box">
-                                <strong>Evidencia:</strong> Los registros internos muestran que diariamente se desechan decenas de kilos de lácteos, panadería y embutidos solo porque vencen al día siguiente, sin que los clientes se enteren a tiempo de posibles liquidaciones.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <hr class="section-divider">
-
-            <!-- ===================== SECCIÓN 3: INVESTIGACIÓN ===================== -->
-            <section id="investigacion" class="page-section">
-                <h2 class="section-title">3. Investigación y Requerimientos</h2>
-
-                <div class="findings-section card">
-                    <h3><i class="fas fa-microscope"></i> Hallazgos y Necesidades</h3>
-                    <div class="relationship-flow">
-                        <div class="flow-step">
-                            <span class="step-title">Problema</span>
-                            <p>Desperdicio de productos próximos a vencer.</p>
-                        </div>
-                        <i class="fas fa-arrow-right"></i>
-                        <div class="flow-step">
-                            <span class="step-title">Evidencia</span>
-                            <p>Merma diaria en supermercados.</p>
-                        </div>
-                        <i class="fas fa-arrow-right"></i>
-                        <div class="flow-step">
-                            <span class="step-title">Necesidad</span>
-                            <p>Vender el excedente rápido antes de que caduque.</p>
-                        </div>
-                        <i class="fas fa-arrow-right"></i>
-                        <div class="flow-step">
-                            <span class="step-title">Requerimiento</span>
-                            <p>Plataforma rápida para publicar ofertas a usuarios locales.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-2-col req-grid" style="margin-top: 1.5rem;">
-                    <div class="card req-card">
-                        <div class="req-header func">
-                            <h3>Requerimientos Funcionales</h3>
-                        </div>
-                        <ul class="custom-list">
-                            <li>El sistema debe permitir a las empresas crear perfiles y publicar productos con fecha de vencimiento y descuento aplicado.</li>
-                            <li>El sistema debe mostrar a los clientes un 'feed' de ofertas ordenadas por cercanía o porcentaje de descuento.</li>
-                            <li>El sistema debe permitir a los clientes comparar precios de productos similares entre diferentes tiendas (competencia).</li>
-                            <li>El sistema debe permitir a los clientes "reservar" el producto para recogerlo en la tienda.</li>
-                        </ul>
-                    </div>
-
-                    <div class="card req-card">
-                        <div class="req-header non-func">
-                            <h3>Requerimientos No Funcionales</h3>
-                        </div>
-                        <ul class="custom-list">
-                            <li><strong>Usabilidad:</strong> La interfaz debe ser intuitiva, similar a una red social, permitiendo publicar una oferta en menos de 3 clics.</li>
-                            <li><strong>Disponibilidad:</strong> Debe ser una aplicación "mobile-first", accesible principalmente desde smartphones.</li>
-                            <li><strong>Escalabilidad:</strong> El sistema debe soportar un alto volumen de usuarios consultando ofertas concurrentemente en horas pico (tardes).</li>
-                            <li><strong>Rendimiento:</strong> El feed de ofertas debe actualizarse en tiempo real (menos de 2 segundos) para mostrar disponibilidad exacta.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            <hr class="section-divider">
-
-            <!-- ===================== SECCIÓN 4 A 11: PLACEHOLDERS ===================== -->
-            <section id="propuesta" class="page-section">
-                <h2 class="section-title">4. Propuesta Innovadora</h2>
-                <div class="card"><p><em>Contenido en desarrollo...</em></p></div>
-            </section>
-            
-            <section id="metodologia" class="page-section">
-                <h2 class="section-title">5. Metodología</h2>
-                <div class="card"><p><em>Contenido en desarrollo...</em></p></div>
-            </section>
-
-            <section id="arquitectura" class="page-section">
-                <h2 class="section-title">6. Arquitectura</h2>
-                <div class="card"><p><em>Contenido en desarrollo...</em></p></div>
-            </section>
-
-            <section id="c4model" class="page-section">
-                <h2 class="section-title">7. C4 Model</h2>
-                <div class="card"><p><em>Contenido en desarrollo...</em></p></div>
-            </section>
-
-            <section id="prototipo" class="page-section">
-                <h2 class="section-title">8. Prototipo</h2>
-                <div class="card"><p><em>Contenido en desarrollo...</em></p></div>
-            </section>
-
-            <section id="implementacion" class="page-section">
-                <h2 class="section-title">9. Implementación</h2>
-                <div class="card"><p><em>Contenido en desarrollo...</em></p></div>
-            </section>
-
-            <section id="resultados" class="page-section">
-                <h2 class="section-title">10. Resultados y conclusiones</h2>
-                <div class="card"><p><em>Contenido en desarrollo...</em></p></div>
-            </section>
-
-            <section id="evidencias" class="page-section">
-                <h2 class="section-title">11. Evidencias del proceso</h2>
-                <div class="card"><p><em>Contenido en desarrollo...</em></p></div>
-            </section>
-
         </main>
-    
-    <!-- Script para marcar el link activo en la barra superior al hacer scroll (Intersection Observer) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.page-section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.3 // Se activa cuando el 30% de la sección es visible
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
-                        // Remover clase activa de todos los links
-                        navLinks.forEach(link => link.classList.remove('active'));
-                        // Añadir clase activa al link correspondiente
-                        const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`);
-                        if (activeLink) {
-                            activeLink.classList.add('active');
-                        }
-                    }
-                });
-            }, observerOptions);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
+    </div>
+    <script src="js/app.js"></script>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, theme: 'default' });
     </script>
 </body>
 </html>
