@@ -1,0 +1,31 @@
+
+    </main>
+
+
+    <footer class="glass-card rounded-none border-x-0 border-b-0 border-t border-slate-700/50 py-8 mt-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p><b class="text-slate-200">ResqApp</b> · Portafolio digital del proyecto académico · 11 páginas.</p>
+            <p class="mt-2 text-emerald-500 font-medium">Contribuyendo al ODS 12: Producción y consumo responsables.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Cada página se muestra sola, como en Google Sites. Al imprimir se ven todas.
+        const paginas = [...document.querySelectorAll('.pagina')];
+        const enlaces = [...document.querySelectorAll('.nav-p')];
+        function mostrar() {
+            const id = (location.hash || '#p1').slice(1);
+            const existe = paginas.some((p) => p.id === id);
+            const actual = existe ? id : 'p1';
+            paginas.forEach((p) => { p.hidden = p.id !== actual; });
+            enlaces.forEach((a) => a.classList.toggle('activa', a.dataset.p === actual));
+            const activo = enlaces.find((a) => a.dataset.p === actual);
+            if (activo) activo.scrollIntoView({ block: 'nearest', inline: 'center' });
+            window.scrollTo({ top: 0 });
+        }
+        addEventListener('hashchange', mostrar);
+        mostrar();
+    </script>
+</body>
+
+</html>

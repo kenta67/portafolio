@@ -1,0 +1,354 @@
+<section id="p6" class="pagina max-w-6xl mx-auto py-10">
+            <div class="text-center mb-14">
+                <span class="fase-chip mb-5">Página 06</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Arquitectura: tres capas + descomposición modular</h2>
+                <p class="text-slate-400 max-w-3xl mx-auto text-lg">Justificación, características, ventajas,
+                    limitaciones y relación con los requerimientos.</p>
+            </div>
+
+
+            <div class="glass-card p-6 mb-12"><svg viewBox="0 0 1140 608" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Arquitectura en tres capas con descomposición modular"
+                    font-family="Outfit, 'Segoe UI', Arial, sans-serif" class="w-full h-auto">
+                    <defs>
+                        <marker id="fl-53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
+                            orient="auto-start-reverse">
+                            <path d="M0 0L10 5L0 10z" fill="#94a3b8" />
+                        </marker>
+                    </defs>
+                    <rect x="255" y="20" width="130" height="34" rx="17" fill="#1e293b" stroke="#334155" /><text x="320"
+                        y="42" font-size="13.5" fill="#e2e8f0" font-weight="700" text-anchor="middle">
+                        <tspan x="320" dy="0">Cuentas</tspan>
+                    </text>
+                    <rect x="395" y="20" width="130" height="34" rx="17" fill="#1e293b" stroke="#334155" /><text x="460"
+                        y="42" font-size="13.5" fill="#e2e8f0" font-weight="700" text-anchor="middle">
+                        <tspan x="460" dy="0">Comercios</tspan>
+                    </text>
+                    <rect x="535" y="20" width="130" height="34" rx="17" fill="#1e293b" stroke="#334155" /><text x="600"
+                        y="42" font-size="13.5" fill="#e2e8f0" font-weight="700" text-anchor="middle">
+                        <tspan x="600" dy="0">Lotes</tspan>
+                    </text>
+                    <rect x="675" y="20" width="130" height="34" rx="17" fill="#1e293b" stroke="#334155" /><text x="740"
+                        y="42" font-size="13.5" fill="#e2e8f0" font-weight="700" text-anchor="middle">
+                        <tspan x="740" dy="0">Descubrimiento</tspan>
+                    </text>
+                    <rect x="815" y="20" width="130" height="34" rx="17" fill="#1e293b" stroke="#334155" /><text x="880"
+                        y="42" font-size="13.5" fill="#e2e8f0" font-weight="700" text-anchor="middle">
+                        <tspan x="880" dy="0">Coordinación</tspan>
+                    </text>
+                    <rect x="955" y="20" width="130" height="34" rx="17" fill="#1e293b" stroke="#334155" /><text
+                        x="1020" y="42" font-size="13.5" fill="#e2e8f0" font-weight="700" text-anchor="middle">
+                        <tspan x="1020" dy="0">Impacto</tspan>
+                    </text>
+                    <rect x="20" y="70" width="1100" height="120" rx="16" fill="#172554" fill-opacity=".45"
+                        stroke="#60a5fa" stroke-width="1.5" /><text x="38" y="122" font-size="14.5" fill="#60a5fa"
+                        font-weight="800" text-anchor="start">
+                        <tspan x="38" dy="0">PRESENTACIÓN</tspan>
+                    </text><text x="38" y="144" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="start">
+                        <tspan x="38" dy="0">src/app · src/components</tspan>
+                    </text>
+                    <rect x="256" y="86" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#60a5fa" stroke-opacity=".5" /><text x="320" y="126" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="320" dy="0">Registro</tspan>
+                        <tspan x="320" dy="18.125">Ingreso</tspan>
+                    </text>
+                    <rect x="396" y="86" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#60a5fa" stroke-opacity=".5" /><text x="460" y="126" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="460" dy="0">Alta comercio</tspan>
+                        <tspan x="460" dy="18.125">Panel</tspan>
+                    </text>
+                    <rect x="536" y="86" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#60a5fa" stroke-opacity=".5" /><text x="600" y="126" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="600" dy="0">Publicar</tspan>
+                        <tspan x="600" dy="18.125">lote</tspan>
+                    </text>
+                    <rect x="676" y="86" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#60a5fa" stroke-opacity=".5" /><text x="740" y="126" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="740" dy="0">Feed</tspan>
+                        <tspan x="740" dy="18.125">Buscador</tspan>
+                    </text>
+                    <rect x="816" y="86" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#60a5fa" stroke-opacity=".5" /><text x="880" y="126" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="880" dy="0">Chat</tspan>
+                        <tspan x="880" dy="18.125">Apartar</tspan>
+                    </text>
+                    <rect x="956" y="86" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#60a5fa" stroke-opacity=".5" /><text x="1020" y="126" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="1020" dy="0">Panel</tspan>
+                        <tspan x="1020" dy="18.125">Ranking</tspan>
+                    </text>
+                    <path d="M130 191 v12" stroke="#94a3b8" stroke-width="2" marker-end="url(#fl-53)" />
+                    <rect x="20" y="206" width="1100" height="120" rx="16" fill="#065f46" fill-opacity=".45"
+                        stroke="#34d399" stroke-width="1.5" /><text x="38" y="258" font-size="14.5" fill="#34d399"
+                        font-weight="800" text-anchor="start">
+                        <tspan x="38" dy="0">LÓGICA DE NEGOCIO</tspan>
+                    </text><text x="38" y="280" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="start">
+                        <tspan x="38" dy="0">lib/acciones · domain · schemas</tspan>
+                    </text>
+                    <rect x="256" y="222" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#34d399" stroke-opacity=".5" /><text x="320" y="262" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="320" dy="0">acciones/</tspan>
+                        <tspan x="320" dy="18.125">auth</tspan>
+                    </text>
+                    <rect x="396" y="222" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#34d399" stroke-opacity=".5" /><text x="460" y="262" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="460" dy="0">acciones/</tspan>
+                        <tspan x="460" dy="18.125">tienda</tspan>
+                    </text>
+                    <rect x="536" y="222" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#34d399" stroke-opacity=".5" /><text x="600" y="262" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="600" dy="0">acciones/lotes</tspan>
+                        <tspan x="600" dy="18.125">pricing · expiry</tspan>
+                    </text>
+                    <rect x="676" y="222" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#34d399" stroke-opacity=".5" /><text x="740" y="262" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="740" dy="0">relevance</tspan>
+                        <tspan x="740" dy="18.125">(fórmula)</tspan>
+                    </text>
+                    <rect x="816" y="222" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#34d399" stroke-opacity=".5" /><text x="880" y="262" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="880" dy="0">acciones/chat</tspan>
+                        <tspan x="880" dy="18.125">reservation</tspan>
+                    </text>
+                    <rect x="956" y="222" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#34d399" stroke-opacity=".5" /><text x="1020" y="262" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="1020" dy="0">impact</tspan>
+                        <tspan x="1020" dy="18.125">(kg · CO₂e)</tspan>
+                    </text>
+                    <path d="M130 327 v12" stroke="#94a3b8" stroke-width="2" marker-end="url(#fl-53)" />
+                    <rect x="20" y="342" width="1100" height="120" rx="16" fill="#431407" fill-opacity=".45"
+                        stroke="#fb923c" stroke-width="1.5" /><text x="38" y="394" font-size="14.5" fill="#fb923c"
+                        font-weight="800" text-anchor="start">
+                        <tspan x="38" dy="0">ACCESO A DATOS</tspan>
+                    </text><text x="38" y="416" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="start">
+                        <tspan x="38" dy="0">lib/repositories · providers</tspan>
+                    </text>
+                    <rect x="256" y="358" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#fb923c" stroke-opacity=".5" /><text x="320" y="398" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="320" dy="0">auth/</tspan>
+                        <tspan x="320" dy="18.125">session</tspan>
+                    </text>
+                    <rect x="396" y="358" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#fb923c" stroke-opacity=".5" /><text x="460" y="398" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="460" dy="0">stores</tspan>
+                        <tspan x="460" dy="18.125">.repo</tspan>
+                    </text>
+                    <rect x="536" y="358" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#fb923c" stroke-opacity=".5" /><text x="600" y="398" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="600" dy="0">lots.repo</tspan>
+                        <tspan x="600" dy="18.125">storage</tspan>
+                    </text>
+                    <rect x="676" y="358" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#fb923c" stroke-opacity=".5" /><text x="740" y="398" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="740" dy="0">lots.repo</tspan>
+                        <tspan x="740" dy="18.125">feed_cercano</tspan>
+                    </text>
+                    <rect x="816" y="358" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#fb923c" stroke-opacity=".5" /><text x="880" y="398" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="880" dy="0">reservations</tspan>
+                        <tspan x="880" dy="18.125">.repo</tspan>
+                    </text>
+                    <rect x="956" y="358" width="128" height="88" rx="10" fill="#0f172a" fill-opacity=".7"
+                        stroke="#fb923c" stroke-opacity=".5" /><text x="1020" y="398" font-size="12.5" fill="#e2e8f0"
+                        font-weight="400" text-anchor="middle">
+                        <tspan x="1020" dy="0">impact</tspan>
+                        <tspan x="1020" dy="18.125">.repo</tspan>
+                    </text>
+                    <path d="M130 463 v12" stroke="#94a3b8" stroke-width="2" marker-end="url(#fl-53)" />
+                    <path d="M20 492 Q20 478 40 478 H760 Q780 478 780 492 V574 Q780 588 760 588 H40 Q20 588 20 574 Z"
+                        fill="#1e293b" stroke="#475569" stroke-width="1.5" /><text x="40" y="512" font-size="14.5"
+                        fill="#e2e8f0" font-weight="800" text-anchor="start">
+                        <tspan x="40" dy="0">BASE DE DATOS · PostgreSQL + PostGIS (Supabase)</tspan>
+                    </text><text x="40" y="538" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="start">
+                        <tspan x="40" dy="0">Tablas: comercios, lotes, fotos, conversaciones, apartados, libro de
+                            impacto</tspan>
+                        <tspan x="40" dy="20">Funciones: feed_cercano() · registrar_entrega() con bloqueo de fila · RLS
+                            en todas las tablas</tspan>
+                    </text>
+                    <rect x="800" y="478" width="320" height="50" rx="12" fill="none" stroke="#475569"
+                        stroke-dasharray="6 4" /><text x="960" y="509" font-size="13" fill="#94a3b8" font-weight="400"
+                        text-anchor="middle">
+                        <tspan x="960" dy="0">Supabase Auth · externo</tspan>
+                    </text>
+                    <rect x="800" y="538" width="320" height="50" rx="12" fill="none" stroke="#475569"
+                        stroke-dasharray="6 4" /><text x="960" y="569" font-size="13" fill="#94a3b8" font-weight="400"
+                        text-anchor="middle">
+                        <tspan x="960" dy="0">Cloudinary · externo</tspan>
+                    </text>
+                </svg></div>
+
+            <div class="glass-card p-8 mb-12 overflow-x-auto">
+                <h3 class="text-2xl font-semibold mb-6">¿Por qué es adecuada para ResqApp?</h3>
+                <table class="tabla tabla-texto">
+                    <thead>
+                        <tr>
+                            <th>Factor</th>
+                            <th>Situación de ResqApp</th>
+                            <th>Qué aporta la arquitectura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Características</td>
+                            <td>Sistema transaccional: el stock, la entrega y el impacto deben cambiar juntos o no
+                                cambiar</td>
+                            <td>Una sola base de datos permite una transacción atómica con bloqueo de fila</td>
+                        </tr>
+                        <tr>
+                            <td>Usuarios</td>
+                            <td>Clientes, comercios y administrador sobre la misma interfaz web</td>
+                            <td>Una aplicación con permisos por fila (RLS), sin sistemas separados por rol</td>
+                        </tr>
+                        <tr>
+                            <td>Volumen</td>
+                            <td>Piloto: 15 a 25 comercios, hasta ~2.500 usuarios diarios, cientos de lotes al día</td>
+                            <td>Una base de datos alcanza de sobra; el cuello de botella son las fotos, que van a un CDN
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Escalabilidad</td>
+                            <td>Crecer por zonas y luego por ciudades</td>
+                            <td>La capa de datos está aislada: cambiar de proveedor toca una carpeta. Si un módulo
+                                crece, se puede separar después</td>
+                        </tr>
+                        <tr>
+                            <td>Mantenimiento</td>
+                            <td>Equipo pequeño y rotativo de estudiantes</td>
+                            <td>Cada capa en su carpeta y cada módulo con nombre del negocio: se sabe dónde tocar</td>
+                        </tr>
+                        <tr>
+                            <td>Separación</td>
+                            <td>Reglas de negocio críticas (nunca vencido, descuento mínimo)</td>
+                            <td>Las reglas viven en la capa de lógica, sin depender de la pantalla ni de la base</td>
+                        </tr>
+                        <tr>
+                            <td>Comunicación</td>
+                            <td>Formularios, feed y chat</td>
+                            <td>Llamadas directas dentro del mismo proceso (Server Actions): sin red interna ni colas
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Seguridad</td>
+                            <td>Datos de comercios y conversaciones privadas</td>
+                            <td>La interfaz nunca toca la base; el servidor valida todo y la base aplica RLS (defensa en
+                                profundidad)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="glass-card p-6">
+                    <h4 class="font-bold mb-2 text-slate-200">¿Por qué no microservicios?</h4>
+                    <p class="text-sm text-slate-400">Con 3 a 5 personas, operar varios servicios con bases de datos
+                        separadas multiplica el trabajo, y la entrega necesita una transacción que abarque stock e
+                        impacto a la vez.</p>
+                </div>
+                <div class="glass-card p-6">
+                    <h4 class="font-bold mb-2 text-slate-200">¿Por qué no SOA?</h4>
+                    <p class="text-sm text-slate-400">No hay sistemas corporativos que integrar; SOA resuelve un
+                        problema que ResqApp no tiene.</p>
+                </div>
+                <div class="glass-card p-6">
+                    <h4 class="font-bold mb-2 text-slate-200">¿Y dirigida por eventos?</h4>
+                    <p class="text-sm text-slate-400">El núcleo es transaccional. Los eventos se usan donde sí aportan:
+                        tareas programadas y, en la fase 2, notificaciones.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div class="glass-card p-7 border-l-4 border-l-emerald-500">
+                    <h4 class="text-lg font-bold mb-3 text-emerald-300">Ventajas</h4>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>• Simple de desplegar: una aplicación y una base de datos.</li>
+                        <li>• Costo cero en el piloto con planes gratuitos.</li>
+                        <li>• Reglas de negocio probables sin levantar la base de datos.</li>
+                        <li>• Evoluciona: un módulo se puede extraer a un servicio si algún día lo necesita.</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-7 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold mb-3 text-orange-300">Posibles limitaciones</h4>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>• Se despliega todo junto: un error en un módulo afecta a toda la aplicación.</li>
+                        <li>• Parte de la lógica crítica está en funciones SQL (la entrega), repartida entre TypeScript
+                            y PL/pgSQL.</li>
+                        <li>• Dependencia de Supabase, mitigada con la capa de repositorios.</li>
+                        <li>• Escala vertical: para cientos de miles de usuarios habría que separar lecturas o módulos.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 overflow-x-auto">
+                <h3 class="text-2xl font-semibold mb-6">Relación con los requerimientos</h3>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Requerimiento</th>
+                            <th>Decisión de arquitectura que lo cumple</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RNF-M1 · RNF-E3</td>
+                            <td>Capa de acceso a datos como única frontera con la base; regla de ESLint que lo impone
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>RF-12</td>
+                            <td>Función <code>registrar_entrega()</code> en la base de datos con
+                                <code>SELECT … FOR UPDATE</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>RNF-L1 · RF-05</td>
+                            <td>Validación en tres capas: esquema en la lógica, trigger y vista en la base de datos</td>
+                        </tr>
+                        <tr>
+                            <td>RNF-R1 · RNF-R2 · RF-07</td>
+                            <td>Función <code>feed_cercano()</code> con índice espacial PostGIS; la fórmula se aplica en
+                                la base</td>
+                        </tr>
+                        <tr>
+                            <td>RNF-R4 · RNF-E2</td>
+                            <td>Proveedor de imágenes externo (Cloudinary) detrás de una interfaz propia</td>
+                        </tr>
+                        <tr>
+                            <td>RNF-S1</td>
+                            <td>Seguridad a nivel de fila (RLS) en todas las tablas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="navegacion-pie flex justify-between items-center gap-4 mt-16 pt-8 border-t border-slate-800">
+                <a href="#p5"
+                    class="px-5 py-3 rounded-xl glass-card text-slate-300 hover:text-emerald-300 transition-colors">← 05
+                    · Metodología</a>
+                <span class="text-slate-600 text-sm">06 / 11</span>
+                <a href="#p7"
+                    class="px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold hover:-translate-y-0.5 transition-all">07
+                    · C4 →</a>
+            </div>
+        </section>
+
+        <!-- ═════════ PÁGINA 07 · C4 ═════════ -->
+        

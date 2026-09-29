@@ -1,0 +1,386 @@
+<section id="p3" class="pagina max-w-6xl mx-auto py-10">
+            <div class="text-center mb-14">
+                <span class="fase-chip mb-5">Página 03</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Investigación y requerimientos</h2>
+                <p class="text-slate-400 max-w-3xl mx-auto text-lg">De lo que encontramos a lo que el sistema debe
+                    hacer: problema → evidencia → necesidad → requerimiento.</p>
+            </div>
+            <!-- Información obtenida -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+                <div class="glass-card p-7 lg:col-span-2">
+                    <h3 class="text-2xl font-semibold mb-5">Información obtenida</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">●</span><span><b
+                                    class="text-slate-100">Del documento del PNUMA:</b> cerca de 1.050 millones de
+                                toneladas de alimentos se desperdiciaron en el mundo en 2022, y alrededor del 12 % en el
+                                comercio minorista. El problema es real y está documentado.</span></li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">●</span><span><b
+                                    class="text-slate-100">De la observación:</b> en los estantes hay lácteos, pan y
+                                embutidos con fecha corta y ningún aviso de oferta visible fuera de la tienda.</span>
+                        </li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">●</span><span><b
+                                    class="text-slate-100">Del análisis en equipo:</b> un modelo gratuito y abierto a
+                                cualquiera invita a acaparar y revender; hace falta control del comercio sobre cada
+                                entrega.</span></li>
+                        <li class="flex gap-3"><span class="text-orange-300 mt-1">●</span><span><b
+                                    class="text-slate-100">De las entrevistas y la encuesta:</b> <span
+                                    class="text-orange-300">en proceso (aquí van los datos reales: cuántos comercios,
+                                    qué respondieron, porcentajes de la encuesta).</span></span></li>
+                    </ul>
+                </div>
+                <div class="glass-card p-7">
+                    <h3 class="text-2xl font-semibold mb-5">Necesidades identificadas</h3>
+                    <ol class="space-y-3 text-sm text-slate-300 list-decimal list-inside">
+                        <li>Avisar rápido a las personas cercanas.</li>
+                        <li>Mostrar primero lo que vence antes y está más cerca.</li>
+                        <li>Dar confianza: fecha visible y nunca producto vencido.</li>
+                        <li>Que el comercio controle a quién y cuánto entrega.</li>
+                        <li>Un canal propio para instituciones.</li>
+                        <li>Medir cuánto se rescata.</li>
+                        <li>Sostener la plataforma sin cobrar comisión.</li>
+                    </ol>
+                </div>
+            </div>
+            <h3 class="text-2xl font-semibold mb-6">Principales hallazgos</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <div
+                    class="glass-card p-6 border-l-4 border-l-emerald-500 hover:-translate-y-1 transition-transform duration-300">
+                    <h4 class="text-xl font-bold mb-3">Interés comercial y social</h4>
+                    <p class="text-slate-400">En proceso: entrevistas a comercios y encuesta a vecinos en curso.</p>
+                </div>
+                <div
+                    class="glass-card p-6 border-l-4 border-l-orange-500 hover:-translate-y-1 transition-transform duration-300">
+                    <h4 class="text-xl font-bold mb-3">Riesgo de mal uso (conflicto validado)</h4>
+                    <p class="text-slate-400">Abrir la plataforma de manera irrestricta para adquirir productos a costo
+                        cero o muy bajo genera un alto riesgo de comercialización desleal (reventa a precio normal).</p>
+                </div>
+                <div
+                    class="glass-card p-6 border-l-4 border-l-blue-500 hover:-translate-y-1 transition-transform duration-300">
+                    <h4 class="text-xl font-bold mb-3">Necesidad de un modelo regulado</h4>
+                    <p class="text-slate-400">Para que el sistema sea sostenible, el comercio debe controlar a quién y
+                        cuánto entrega, y las instituciones necesitan un canal propio de donación.</p>
+                </div>
+                <div
+                    class="glass-card p-6 border-l-4 border-l-purple-500 hover:-translate-y-1 transition-transform duration-300">
+                    <h4 class="text-xl font-bold mb-3">Oportunidad de monetización</h4>
+                    <p class="text-slate-400">El modelo puede sostenerse con suscripciones Premium que brinden
+                        beneficios y acceso anticipado, sin cobrar comisión por cada venta.</p>
+                </div>
+            </div>
+            <div class="mt-12"></div>
+
+            <!-- Trazabilidad -->
+            <div class="glass-card p-8 mb-12 overflow-x-auto">
+                <h3 class="text-2xl font-semibold mb-2">De la evidencia al requerimiento</h3>
+                <p class="text-slate-400 mb-6 text-sm">Problema → evidencia → necesidad → requerimiento.</p>
+                <table class="tabla tabla-texto">
+                    <thead>
+                        <tr>
+                            <th>Problema / hallazgo</th>
+                            <th>Evidencia</th>
+                            <th>Necesidad</th>
+                            <th>Requerimientos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sin canal de aviso</td>
+                            <td>Entrevistas a comercios · PNUMA (12 % del desperdicio en el comercio minorista)</td>
+                            <td>Publicar ofertas y que las vean los vecinos cercanos</td>
+                            <td>RF-04, RF-07, RF-08</td>
+                        </tr>
+                        <tr>
+                            <td>Urgencia de horas</td>
+                            <td>Observación de estantes con fecha corta</td>
+                            <td>Mostrar primero lo que vence antes y está más cerca</td>
+                            <td>RF-07, RF-18</td>
+                        </tr>
+                        <tr>
+                            <td>Desconfianza</td>
+                            <td>Preguntas a vecinos sobre confianza</td>
+                            <td>Fecha visible y nunca producto vencido</td>
+                            <td>RF-05, RF-09, RNF-L1</td>
+                        </tr>
+                        <tr>
+                            <td>Acaparamiento</td>
+                            <td>Hallazgo 2 · proyección de escenarios</td>
+                            <td>Que el comercio controle a quién y cuánto entrega</td>
+                            <td>RF-11, RF-12, RF-13</td>
+                        </tr>
+                        <tr>
+                            <td>Instituciones</td>
+                            <td>Hallazgo 3 · entrevistas a casas hogar</td>
+                            <td>Canal de donación a instituciones verificadas</td>
+                            <td>RF-19</td>
+                        </tr>
+                        <tr>
+                            <td>Impacto invisible</td>
+                            <td>Ningún comercio registra su merma</td>
+                            <td>Medir kg rescatados y CO₂ evitado</td>
+                            <td>RF-14, RF-15, RF-16</td>
+                        </tr>
+                        <tr>
+                            <td>Sostenibilidad</td>
+                            <td>Hallazgo 4 · análisis del modelo</td>
+                            <td>Ingresos sin cobrar comisión por venta</td>
+                            <td>RF-20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- RF -->
+            <div class="glass-card p-8 mb-12 overflow-x-auto">
+                <h3 class="text-2xl font-semibold mb-6">Requerimientos funcionales</h3>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Requerimiento</th>
+                            <th>Módulo</th>
+                            <th>Prio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RF-01</td>
+                            <td>Registrarse e iniciar sesión con correo y contraseña; el perfil se crea automáticamente.
+                            </td>
+                            <td>Cuentas</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-02</td>
+                            <td>Cualquier usuario puede comprar; se convierte en comercio al registrar su tienda (el rol
+                                se deriva de tener una tienda, no se elige).</td>
+                            <td>Cuentas</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-03</td>
+                            <td>Registrar un comercio con nombre, rubro, dirección, ubicación GPS, referencia, teléfono
+                                y horarios por día.</td>
+                            <td>Comercios</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-04</td>
+                            <td>Publicar un lote de rescate: producto, categoría, foto, cantidad, fecha de vencimiento,
+                                precio original, precio de rescate, ventana de retiro y peso.</td>
+                            <td>Lotes</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-05</td>
+                            <td>Rechazar lotes vencidos o que vencen hoy, precios de rescate con menos del 10 % de
+                                descuento y ventanas que cierran después del vencimiento.</td>
+                            <td>Lotes</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-06</td>
+                            <td>Calcular y mostrar el porcentaje de descuento en vivo mientras se publica.</td>
+                            <td>Lotes</td>
+                            <td><span class="prio prio-S">S</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-07</td>
+                            <td>Mostrar un feed ordenado por relevancia: cercanía (40 %), urgencia (30 %), descuento (20
+                                %) y reputación (10 %).</td>
+                            <td>Descubrimiento</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-08</td>
+                            <td>Buscar por texto y filtrar por categoría, descuento mínimo y "cierra hoy".</td>
+                            <td>Descubrimiento</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-09</td>
+                            <td>Ver el detalle del lote con fecha de vencimiento destacada, tiempo restante, horarios,
+                                ubicación y enlace a Google Maps.</td>
+                            <td>Descubrimiento</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-10</td>
+                            <td>Preguntar al comercio por chat sin necesidad de reservar; varias personas pueden
+                                preguntar por el mismo lote.</td>
+                            <td>Coordinación</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-11</td>
+                            <td>Solicitar un apartado que el comercio acepta o rechaza. Apartar es un acuerdo: no
+                                bloquea el stock para los demás.</td>
+                            <td>Coordinación</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-12</td>
+                            <td>Registrar la entrega: único momento en que baja el stock y se mide el impacto; dos
+                                ventas simultáneas de la última unidad nunca dejan el stock negativo.</td>
+                            <td>Coordinación</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-13</td>
+                            <td>Permitir al comercio fijar un máximo de unidades por persona en cada lote (control de
+                                acaparamiento).</td>
+                            <td>Coordinación</td>
+                            <td><span class="prio prio-S">S</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-14</td>
+                            <td>Registrar por cada entrega los kg rescatados, el CO₂e evitado y los bolivianos ahorrados
+                                en un libro de impacto inmutable.</td>
+                            <td>Impacto</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-15</td>
+                            <td>Panel del comercio con lotes activos, apartados, entregas e impacto acumulado.</td>
+                            <td>Impacto</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-16</td>
+                            <td>Perfil con impacto personal, insignias y ranking de rescate por barrio.</td>
+                            <td>Impacto</td>
+                            <td><span class="prio prio-S">S</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-17</td>
+                            <td>Denunciar una publicación; el administrador revisa y puede ocultar el lote o suspender
+                                el comercio.</td>
+                            <td>Moderación</td>
+                            <td><span class="prio prio-S">S</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-18</td>
+                            <td>Retirar automáticamente del feed los lotes cuya ventana cerró o que llegaron a su
+                                vencimiento.</td>
+                            <td>Lotes</td>
+                            <td><span class="prio prio-M">M</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-19</td>
+                            <td>Canal de donación: el comercio marca un lote como donable y lo ofrece a instituciones
+                                verificadas.</td>
+                            <td>Instituciones</td>
+                            <td><span class="prio prio-C">C</span></td>
+                        </tr>
+                        <tr>
+                            <td>RF-20</td>
+                            <td>Suscripción Premium con beneficios y acceso anticipado a las ofertas.</td>
+                            <td>Negocio</td>
+                            <td><span class="prio prio-C">C</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- RNF -->
+            <h3 class="text-2xl font-semibold mb-6">Requerimientos no funcionales</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-6 border-t-4 border-t-red-400">
+                    <h4 class="text-lg font-bold mb-3 text-red-300">🔒 Seguridad</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><b class="text-slate-100">RNF-S1</b> Seguridad a nivel de fila (RLS) en todas las tablas:
+                            cada usuario solo lee y escribe lo suyo.</li>
+                        <li><b class="text-slate-100">RNF-S2</b> Contraseñas con hash, gestionadas por el proveedor de
+                            autenticación.</li>
+                        <li><b class="text-slate-100">RNF-S3</b> Todo el tráfico por HTTPS; la llave secreta nunca llega
+                            al navegador.</li>
+                        <li><b class="text-slate-100">RNF-S4</b> Validación de toda entrada en el servidor, no solo en
+                            el formulario.</li>
+                        <li><b class="text-slate-100">RNF-S5</b> Nadie puede comprar en su propia tienda (evita inflar
+                            el impacto).</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 border-t-4 border-t-blue-400">
+                    <h4 class="text-lg font-bold mb-3 text-blue-300">⚡ Rendimiento</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><b class="text-slate-100">RNF-R1</b> El feed responde en menos de 500 ms (p95).</li>
+                        <li><b class="text-slate-100">RNF-R2</b> Búsqueda por cercanía con índice espacial (PostGIS),
+                            nunca recorriendo toda la tabla.</li>
+                        <li><b class="text-slate-100">RNF-R3</b> Paginación por cursor, sin OFFSET.</li>
+                        <li><b class="text-slate-100">RNF-R4</b> Fotos en WebP por CDN, miniatura del feed de 30 KB como
+                            máximo.</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 border-t-4 border-t-emerald-400">
+                    <h4 class="text-lg font-bold mb-3 text-emerald-300">🟢 Disponibilidad</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><b class="text-slate-100">RNF-D1</b> Disponibilidad objetivo del 99 % mensual en el piloto.
+                        </li>
+                        <li><b class="text-slate-100">RNF-D2</b> Respaldo diario de la base de datos.</li>
+                        <li><b class="text-slate-100">RNF-D3</b> Doble barrera de expiración: la consulta filtra y una
+                            tarea programada marca los lotes vencidos.</li>
+                        <li><b class="text-slate-100">RNF-D4</b> Tareas programadas idempotentes: ejecutarlas dos veces
+                            no cambia el resultado.</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 border-t-4 border-t-yellow-400">
+                    <h4 class="text-lg font-bold mb-3 text-yellow-300">👆 Facilidad de uso</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><b class="text-slate-100">RNF-U1</b> Publicar un lote toma 60 segundos o menos, sin
+                            capacitación.</li>
+                        <li><b class="text-slate-100">RNF-U2</b> Diseño pensado primero para el celular (el comerciante
+                            publica desde el mostrador).</li>
+                        <li><b class="text-slate-100">RNF-U3</b> Todo en español, montos en bolivianos y horas de
+                            Bolivia.</li>
+                        <li><b class="text-slate-100">RNF-U4</b> Contraste conforme a WCAG 2.1 AA.</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 border-t-4 border-t-purple-400">
+                    <h4 class="text-lg font-bold mb-3 text-purple-300">📈 Escalabilidad</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><b class="text-slate-100">RNF-E1</b> Crecer por zonas y ciudades sin cambiar el esquema de
+                            datos.</li>
+                        <li><b class="text-slate-100">RNF-E2</b> Las imágenes salen de la base de datos desde el día uno
+                            (CDN externo).</li>
+                        <li><b class="text-slate-100">RNF-E3</b> Cambiar de proveedor de base de datos tocando una sola
+                            carpeta (capa de repositorios).</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 border-t-4 border-t-cyan-400">
+                    <h4 class="text-lg font-bold mb-3 text-cyan-300">🛠️ Mantenibilidad</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><b class="text-slate-100">RNF-M1</b> La interfaz nunca accede directo a la base de datos; lo
+                            vigila una regla de ESLint.</li>
+                        <li><b class="text-slate-100">RNF-M2</b> Esquema versionado con migraciones SQL numeradas.</li>
+                        <li><b class="text-slate-100">RNF-M3</b> Lógica de dominio con pruebas automáticas (cobertura de
+                            70 % o más).</li>
+                        <li><b class="text-slate-100">RNF-M4</b> TypeScript en todo el proyecto.</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 border-t-4 border-t-orange-400 md:col-span-2 lg:col-span-3">
+                    <h4 class="text-lg font-bold mb-3 text-orange-300">⚖️ Legal y seguridad alimentaria (máxima
+                        prioridad)</h4>
+                    <div class="grid md:grid-cols-3 gap-4 text-sm text-slate-300">
+                        <p><b class="text-slate-100">RNF-L1</b> Nunca se publica producto vencido: se bloquea en el
+                            formulario, en un trigger de la base de datos y en la vista del feed.</p>
+                        <p><b class="text-slate-100">RNF-L2</b> La fecha de vencimiento se muestra siempre y no se puede
+                            ocultar.</p>
+                        <p><b class="text-slate-100">RNF-L3</b> La plataforma no maneja dinero: el pago se arregla entre
+                            comercio y cliente. ResqApp es intermediaria de información.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="navegacion-pie flex justify-between items-center gap-4 mt-16 pt-8 border-t border-slate-800">
+                <a href="#p2"
+                    class="px-5 py-3 rounded-xl glass-card text-slate-300 hover:text-emerald-300 transition-colors">← 02
+                    · El problema</a>
+                <span class="text-slate-600 text-sm">03 / 11</span>
+                <a href="#p4"
+                    class="px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold hover:-translate-y-0.5 transition-all">04
+                    · Propuesta →</a>
+            </div>
+        </section>
+
+        <!-- ═════════ PÁGINA 04 · PROPUESTA ═════════ -->
+        

@@ -1,0 +1,129 @@
+<section id="p10" class="pagina max-w-6xl mx-auto py-10">
+            <div class="text-center mb-14">
+                <span class="fase-chip mb-5">Página 10</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Resultados y conclusiones</h2>
+                <p class="text-slate-400 max-w-3xl mx-auto text-lg">Qué se logró, qué funciona, qué quedó pendiente y
+                    qué aprendimos.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+                <div class="glass-card p-7 border-t-4 border-t-emerald-400">
+                    <h3 class="text-xl font-bold mb-4 text-emerald-300">Qué se logró</h3>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>• Problema identificado, delimitado y con árbol de causas y efectos.</li>
+                        <li>• 20 requerimientos funcionales y 27 no funcionales trazados al problema.</li>
+                        <li>• Metodología justificada con Boehm-Turner y Cockburn.</li>
+                        <li>• Arquitectura de tres capas modelada en C4 (niveles 1, 2 y 3).</li>
+                        <li>• Arquitectura implementada y protegida por una regla de ESLint.</li>
+                        <li>• Dos módulos completos atravesando las tres capas.</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-7 border-t-4 border-t-blue-400">
+                    <h3 class="text-xl font-bold mb-4 text-blue-300">Qué funciona actualmente</h3>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>✓ Registro e inicio de sesión</li>
+                        <li>✓ Alta de comercio con ubicación y horarios</li>
+                        <li>✓ Publicación de lotes con foto y validaciones (módulo 1)</li>
+                        <li>✓ Feed por relevancia, buscador y detalle</li>
+                        <li>✓ Chat, apartado y registro de entrega (módulo 2)</li>
+                        <li>✓ Libro de impacto, panel del comercio y ranking por barrio</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-7 border-t-4 border-t-orange-400">
+                    <h3 class="text-xl font-bold mb-4 text-orange-300">Qué quedó pendiente</h3>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>◷ Datos reales de entrevistas y encuesta</li>
+                        <li>◷ Máximo de unidades por persona (RF-13)</li>
+                        <li>◷ Donaciones a instituciones (RF-19)</li>
+                        <li>◷ Suscripción Premium (RF-20)</li>
+                        <li>◷ Mapa interactivo para marcar la ubicación</li>
+                        <li>◷ Pantallas de reseñas, denuncias y notificaciones</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div class="glass-card p-7">
+                    <h3 class="text-xl font-bold mb-4">Dificultades encontradas</h3>
+                    <ul class="text-sm text-slate-300 space-y-3">
+                        <li><b class="text-slate-100">Alcance disperso:</b> al principio la idea mezclaba red social,
+                            marketplace y ropa usada. Lo centramos en un solo objeto: el lote de rescate.</li>
+                        <li><b class="text-slate-100">El conflicto de la reventa:</b> abrir la plataforma a todos creó
+                            un riesgo que no habíamos previsto.</li>
+                        <li><b class="text-slate-100">Validar "nunca vencido":</b> la base de datos no permite comparar
+                            con la fecha actual en una restricción CHECK; tuvimos que usar un trigger.</li>
+                        <li><b class="text-slate-100">Cambios de las herramientas:</b> Supabase renombró sus llaves y
+                            Next.js 16 cambió cómo se leen los parámetros; los tutoriales estaban desactualizados.</li>
+                        <li><b class="text-slate-100">Peso de las fotos:</b> una foto vertical pesaba el doble de lo que
+                            se veía; hubo que recortarla en el CDN.</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-7">
+                    <h3 class="text-xl font-bold mb-4">Decisiones importantes</h3>
+                    <ul class="text-sm text-slate-300 space-y-3">
+                        <li><b class="text-slate-100">No es una red social:</b> el feed se ordena por cercanía y
+                            urgencia, no por amigos.</li>
+                        <li><b class="text-slate-100">Abierto a cualquier comercio,</b> no solo a tiendas de barrio.
+                        </li>
+                        <li><b class="text-slate-100">Preguntar sin reservar</b> y <b class="text-slate-100">apartar sin
+                                bloquear:</b> como se compra con la "casera".</li>
+                        <li><b class="text-slate-100">La plataforma no toca dinero:</b> es intermediaria de información.
+                        </li>
+                        <li><b class="text-slate-100">El stock baja solo al registrar la entrega,</b> que es cuando se
+                            mide el impacto.</li>
+                        <li><b class="text-slate-100">Tres capas y no microservicios:</b> se adapta al tamaño del equipo
+                            y a la necesidad de transacciones.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-7">
+                    <h3 class="text-xl font-bold mb-4">Aprendizajes</h3>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>• Un buen problema es específico y observable; "hay contaminación" no alcanza.</li>
+                        <li>• La metodología se elige por las características del proyecto, no por moda.</li>
+                        <li>• Una arquitectura que depende de la disciplina se rompe; hay que imponerla con
+                            herramientas.</li>
+                        <li>• Las reglas críticas se validan en varias capas, nunca en una sola.</li>
+                        <li>• Un impacto que no se mide es solo una declaración de intenciones.</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-7 border border-emerald-500/30">
+                    <h3 class="text-xl font-bold mb-4">Aporte esperado y relación con el ODS 12</h3>
+                    <p class="text-sm text-slate-300 mb-4">ResqApp ataca el desperdicio en el escalón más alto de la
+                        jerarquía de residuos: la <b class="text-emerald-300">prevención</b>. El producto nunca llega a
+                        ser basura.</p>
+                    <div class="grid grid-cols-3 gap-3 text-center text-sm mb-4">
+                        <div class="rounded-xl bg-slate-800/60 border border-slate-700 p-3">
+                            <p class="text-emerald-300 font-bold">12.3</p>
+                            <p class="text-slate-400 text-xs">kg rescatados</p>
+                        </div>
+                        <div class="rounded-xl bg-slate-800/60 border border-slate-700 p-3">
+                            <p class="text-emerald-300 font-bold">12.5</p>
+                            <p class="text-slate-400 text-xs">rescates completados</p>
+                        </div>
+                        <div class="rounded-xl bg-slate-800/60 border border-slate-700 p-3">
+                            <p class="text-emerald-300 font-bold">12.8</p>
+                            <p class="text-slate-400 text-xs">usuarios con impacto</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400"><b class="text-slate-200">Indicador principal:</b> la <b>tasa de
+                            rescate</b> (lotes vendidos ÷ lotes publicados), con meta de 55 % o más en el piloto. No
+                        importa cuántos usuarios haya, sino cuánto producto no terminó en la basura.</p>
+                </div>
+            </div>
+
+
+            <div class="navegacion-pie flex justify-between items-center gap-4 mt-16 pt-8 border-t border-slate-800">
+                <a href="#p9"
+                    class="px-5 py-3 rounded-xl glass-card text-slate-300 hover:text-emerald-300 transition-colors">← 09
+                    · Implementación</a>
+                <span class="text-slate-600 text-sm">10 / 11</span>
+                <a href="#p11"
+                    class="px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold hover:-translate-y-0.5 transition-all">11
+                    · Evidencias →</a>
+            </div>
+        </section>
+
+        <!-- ═════════ PÁGINA 11 · EVIDENCIAS ═════════ -->
+        
