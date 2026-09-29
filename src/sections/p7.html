@@ -1,569 +1,206 @@
 <section id="p7" class="pagina max-w-6xl mx-auto py-10">
-            <div class="text-center mb-14">
-                <span class="fase-chip mb-5">Página 07</span>
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Modelo C4</h2>
-                <p class="text-slate-400 max-w-3xl mx-auto text-lg">La arquitectura en tres niveles de zoom: contexto,
-                    contenedores y componentes.</p>
-            </div>
+    <div class="text-center mb-14">
+        <span class="fase-chip mb-5">Página 07</span>
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Modelo C4</h2>
+        <p class="text-slate-400 max-w-3xl mx-auto text-lg">La arquitectura de microservicios en tres niveles de zoom: contexto, contenedores y componentes.</p>
+    </div>
 
-
-            <div class="glass-card p-6 md:p-8 mb-10">
-                <div class="flex flex-wrap items-baseline gap-3 mb-2"><span
-                        class="text-emerald-700 font-mono text-sm">Nivel 1</span>
-                    <h3 class="text-2xl font-semibold">Contexto del sistema</h3>
-                </div>
-                <p class="text-slate-400 mb-6">ResqApp es usado por tres personas (cliente, comercio y administrador) y
-                    se apoya en tres sistemas externos: Supabase Auth para autenticar, Cloudinary para las fotos y
-                    Google Maps para indicar cómo llegar al comercio.</p>
-                <svg viewBox="0 0 1100 640" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="C4 Nivel 1: diagrama de contexto de ResqApp"
-                    font-family="Outfit, 'Segoe UI', Arial, sans-serif" class="w-full h-auto">
-                    <defs>
-                        <marker id="fl-43" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
-                            orient="auto-start-reverse">
-                            <path d="M0 0L10 5L0 10z" fill="#94a3b8" />
-                        </marker>
-                    </defs>
-
-                    <circle cx="220" cy="36" r="16" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" />
-                    <rect x="90" y="48" width="260" height="102" rx="16" fill="#1e3a8a" stroke="#60a5fa"
-                        stroke-width="2" /><text x="220" y="74" font-size="15.5" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="220" dy="0">Cliente / Vecino</tspan>
-                    </text><text x="220" y="91" font-size="11" fill="#bfdbfe" font-weight="400" text-anchor="middle">
-                        <tspan x="220" dy="0">[Persona]</tspan>
-                    </text><text x="220" y="110" font-size="12" fill="#dbeafe" font-weight="400" text-anchor="middle">
-                        <tspan x="220" dy="0">Busca productos con descuento</tspan>
-                        <tspan x="220" dy="16.200000000000003">cerca de su casa y los retira</tspan>
-                    </text>
-                    <circle cx="550" cy="36" r="16" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" />
-                    <rect x="420" y="48" width="260" height="102" rx="16" fill="#1e3a8a" stroke="#60a5fa"
-                        stroke-width="2" /><text x="550" y="74" font-size="15.5" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="550" dy="0">Comercio</tspan>
-                    </text><text x="550" y="91" font-size="11" fill="#bfdbfe" font-weight="400" text-anchor="middle">
-                        <tspan x="550" dy="0">[Persona]</tspan>
-                    </text><text x="550" y="110" font-size="12" fill="#dbeafe" font-weight="400" text-anchor="middle">
-                        <tspan x="550" dy="0">Tienda, micromercado, panadería,</tspan>
-                        <tspan x="550" dy="16.200000000000003">supermercado o restaurante</tspan>
-                    </text>
-                    <circle cx="880" cy="36" r="16" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" />
-                    <rect x="750" y="48" width="260" height="102" rx="16" fill="#1e3a8a" stroke="#60a5fa"
-                        stroke-width="2" /><text x="880" y="74" font-size="15.5" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="880" dy="0">Administrador</tspan>
-                    </text><text x="880" y="91" font-size="11" fill="#bfdbfe" font-weight="400" text-anchor="middle">
-                        <tspan x="880" dy="0">[Persona]</tspan>
-                    </text><text x="880" y="110" font-size="12" fill="#dbeafe" font-weight="400" text-anchor="middle">
-                        <tspan x="880" dy="0">Verifica comercios y</tspan>
-                        <tspan x="880" dy="16.200000000000003">atiende denuncias</tspan>
-                    </text>
-                    <rect x="300" y="270" width="500" height="140" rx="14" fill="#065f46" stroke="#34d399"
-                        stroke-width="2" /><text x="550" y="300" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="550" dy="0">ResqApp</tspan>
-                    </text><text x="550" y="319" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="550" dy="0">[Sistema de software]</tspan>
-                    </text><text x="550" y="342" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="550" dy="0">Conecta a los comercios con las personas cercanas</tspan>
-                        <tspan x="550" dy="16.875">para rescatar productos próximos a vencer</tspan>
-                        <tspan x="550" dy="16.875">y mide el impacto de cada rescate</tspan>
-                    </text>
-                    <rect x="40" y="500" width="280" height="110" rx="14" fill="#1e293b" stroke="#475569"
-                        stroke-width="2" /><text x="180" y="530" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="180" dy="0">Supabase Auth</tspan>
-                    </text><text x="180" y="549" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="180" dy="0">[Sistema externo]</tspan>
-                    </text><text x="180" y="572" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="180" dy="0">Registro, inicio de sesión</tspan>
-                        <tspan x="180" dy="16.875">y manejo de sesiones</tspan>
-                    </text>
-                    <rect x="410" y="500" width="280" height="110" rx="14" fill="#1e293b" stroke="#475569"
-                        stroke-width="2" /><text x="550" y="530" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="550" dy="0">Cloudinary</tspan>
-                    </text><text x="550" y="549" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="550" dy="0">[Sistema externo]</tspan>
-                    </text><text x="550" y="572" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="550" dy="0">Guarda, comprime y sirve</tspan>
-                        <tspan x="550" dy="16.875">las fotos por CDN</tspan>
-                    </text>
-                    <rect x="780" y="500" width="280" height="110" rx="14" fill="#1e293b" stroke="#475569"
-                        stroke-width="2" /><text x="920" y="530" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="920" dy="0">Google Maps</tspan>
-                    </text><text x="920" y="549" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="920" dy="0">[Sistema externo]</tspan>
-                    </text><text x="920" y="572" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="920" dy="0">Muestra cómo llegar</tspan>
-                        <tspan x="920" dy="16.875">al comercio</tspan>
-                    </text>
-                    <line x1="220" y1="150" x2="420" y2="270" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-43)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="250"
-                            y="215" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="250" dy="0">Busca, pregunta por chat</tspan>
-                            <tspan x="250" dy="15.525">y pide apartados</tspan>
-                        </text></g>
-                    <line x1="550" y1="150" x2="550" y2="270" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-43)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="550"
-                            y="200" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="550" dy="0">Publica productos y</tspan>
-                            <tspan x="550" dy="15.525">registra entregas</tspan>
-                        </text></g>
-                    <line x1="880" y1="150" x2="680" y2="270" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-43)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="850"
-                            y="215" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="850" dy="0">Verifica y modera</tspan>
-                        </text></g>
-                    <line x1="400" y1="410" x2="220" y2="500" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-43)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="270"
-                            y="452" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="270" dy="0">Autentica usuarios</tspan>
-                        </text></g>
-                    <line x1="550" y1="410" x2="550" y2="500" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-43)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="550"
-                            y="460" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="550" dy="0">Sube y muestra fotos</tspan>
-                        </text></g>
-                    <line x1="700" y1="410" x2="900" y2="500" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-43)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="845"
-                            y="445" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="845" dy="0">Genera el enlace</tspan>
-                            <tspan x="845" dy="15.525">de ubicación</tspan>
-                        </text></g>
-
-                    <g font-size="12" fill="#94a3b8">
-                        <rect x="40" y="620" width="16" height="12" rx="3" fill="#1e3a8a" stroke="#60a5fa" /><text
-                            x="62" y="631">Persona</text>
-                        <rect x="135" y="620" width="16" height="12" rx="3" fill="#065f46" stroke="#34d399" /><text
-                            x="157" y="631">ResqApp</text>
-                        <rect x="235" y="620" width="16" height="12" rx="3" fill="#1e293b" stroke="#475569" /><text
-                            x="257" y="631">Sistema externo</text>
-                    </g>
-
-                </svg>
-            </div>
-
-            <div class="glass-card p-6 md:p-8 mb-10">
-                <div class="flex flex-wrap items-baseline gap-3 mb-2"><span
-                        class="text-emerald-700 font-mono text-sm">Nivel 2</span>
-                    <h3 class="text-2xl font-semibold">Contenedores</h3>
-                </div>
-                <p class="text-slate-400 mb-6">Adentro hay cuatro contenedores: la aplicación web en el navegador, el
-                    servidor de aplicación (Next.js en Vercel) que ejecuta los casos de uso, la base de datos PostgreSQL
-                    + PostGIS con sus funciones y permisos, y las tareas programadas que expiran lotes. Las fotos viajan
-                    del navegador directo a Cloudinary para no cargar el servidor.</p>
-                <svg viewBox="0 0 1100 800" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="C4 Nivel 2: diagrama de contenedores de ResqApp"
-                    font-family="Outfit, 'Segoe UI', Arial, sans-serif" class="w-full h-auto">
-                    <defs>
-                        <marker id="fl-47" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
-                            orient="auto-start-reverse">
-                            <path d="M0 0L10 5L0 10z" fill="#94a3b8" />
-                        </marker>
-                    </defs>
-
-                    <circle cx="170" cy="32" r="16" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" />
-                    <rect x="60" y="44" width="220" height="90" rx="16" fill="#1e3a8a" stroke="#60a5fa"
-                        stroke-width="2" /><text x="170" y="70" font-size="15.5" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="170" dy="0">Cliente</tspan>
-                    </text><text x="170" y="87" font-size="11" fill="#bfdbfe" font-weight="400" text-anchor="middle">
-                        <tspan x="170" dy="0">[Persona]</tspan>
-                    </text><text x="170" y="106" font-size="12" fill="#dbeafe" font-weight="400" text-anchor="middle">
-                        <tspan x="170" dy="0">Compra y retira</tspan>
-                    </text>
-                    <circle cx="430" cy="32" r="16" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" />
-                    <rect x="320" y="44" width="220" height="90" rx="16" fill="#1e3a8a" stroke="#60a5fa"
-                        stroke-width="2" /><text x="430" y="70" font-size="15.5" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="430" dy="0">Comercio</tspan>
-                    </text><text x="430" y="87" font-size="11" fill="#bfdbfe" font-weight="400" text-anchor="middle">
-                        <tspan x="430" dy="0">[Persona]</tspan>
-                    </text><text x="430" y="106" font-size="12" fill="#dbeafe" font-weight="400" text-anchor="middle">
-                        <tspan x="430" dy="0">Publica y entrega</tspan>
-                    </text>
-                    <circle cx="690" cy="32" r="16" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" />
-                    <rect x="580" y="44" width="220" height="90" rx="16" fill="#1e3a8a" stroke="#60a5fa"
-                        stroke-width="2" /><text x="690" y="70" font-size="15.5" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="690" dy="0">Administrador</tspan>
-                    </text><text x="690" y="87" font-size="11" fill="#bfdbfe" font-weight="400" text-anchor="middle">
-                        <tspan x="690" dy="0">[Persona]</tspan>
-                    </text><text x="690" y="106" font-size="12" fill="#dbeafe" font-weight="400" text-anchor="middle">
-                        <tspan x="690" dy="0">Modera</tspan>
-                    </text>
-                    <rect x="30" y="165" width="800" height="600" rx="18" fill="none" stroke="#34d399"
-                        stroke-width="1.5" stroke-dasharray="8 6" />
-                    <text x="50" y="190" font-size="13" fill="#34d399" font-weight="700" text-anchor="start">
-                        <tspan x="50" dy="0">ResqApp [Sistema de software]</tspan>
-                    </text>
-                    <rect x="270" y="210" width="320" height="120" rx="14" fill="#065f46" stroke="#34d399"
-                        stroke-width="2" /><text x="430" y="240" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="430" dy="0">Aplicación web</tspan>
-                    </text><text x="430" y="259" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="430" dy="0">[Contenedor: Next.js + React · navegador]</tspan>
-                    </text><text x="430" y="282" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="430" dy="0">Feed, buscador, detalle, chat,</tspan>
-                        <tspan x="430" dy="16.875">publicar y panel del comercio</tspan>
-                    </text>
-                    <rect x="270" y="395" width="320" height="120" rx="14" fill="#065f46" stroke="#34d399"
-                        stroke-width="2" /><text x="430" y="425" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="430" dy="0">Servidor de aplicación</tspan>
-                    </text><text x="430" y="444" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="430" dy="0">[Contenedor: Next.js · Server Actions · Vercel]</tspan>
-                    </text><text x="430" y="467" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="430" dy="0">Casos de uso, validación, reglas</tspan>
-                        <tspan x="430" dy="16.875">de negocio y repositorios</tspan>
-                    </text>
-                    <path d="M80 599 Q80 585 240 585 Q400 585 400 599 V721 Q400 735 240 735 Q80 735 80 721 Z"
-                        fill="#065f46" stroke="#34d399" stroke-width="2" />
-                    <path d="M80 599 Q80 613 240 613 Q400 613 400 599" fill="none" stroke="#34d399" stroke-width="2" />
-                    <text x="240" y="635" font-size="16" fill="#e2e8f0" font-weight="700" text-anchor="middle">
-                        <tspan x="240" dy="0">Base de datos</tspan>
-                    </text><text x="240" y="654" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="240" dy="0">[Contenedor: PostgreSQL + PostGIS · Supabase]</tspan>
-                    </text><text x="240" y="677" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="240" dy="0">Comercios, lotes, chats, apartados,</tspan>
-                        <tspan x="240" dy="16.875">libro de impacto · RLS y funciones SQL</tspan>
-                    </text>
-                    <rect x="470" y="610" width="320" height="110" rx="14" fill="#065f46" stroke="#34d399"
-                        stroke-width="2" /><text x="630" y="640" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="630" dy="0">Tareas programadas</tspan>
-                    </text><text x="630" y="659" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="630" dy="0">[Contenedor: pg_cron + funciones SQL]</tspan>
-                    </text><text x="630" y="682" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="630" dy="0">Expira lotes vencidos y</tspan>
-                        <tspan x="630" dy="16.875">libera apartados</tspan>
-                    </text>
-                    <rect x="870" y="210" width="210" height="110" rx="14" fill="#1e293b" stroke="#475569"
-                        stroke-width="2" /><text x="975" y="240" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="975" dy="0">Google Maps</tspan>
-                    </text><text x="975" y="259" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="975" dy="0">[Sistema externo]</tspan>
-                    </text><text x="975" y="282" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="975" dy="0">Ruta al comercio</tspan>
-                    </text>
-                    <rect x="870" y="365" width="210" height="110" rx="14" fill="#1e293b" stroke="#475569"
-                        stroke-width="2" /><text x="975" y="395" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="975" dy="0">Cloudinary</tspan>
-                    </text><text x="975" y="414" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="975" dy="0">[Sistema externo]</tspan>
-                    </text><text x="975" y="437" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="975" dy="0">Fotos por CDN</tspan>
-                    </text>
-                    <rect x="870" y="520" width="210" height="110" rx="14" fill="#1e293b" stroke="#475569"
-                        stroke-width="2" /><text x="975" y="550" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="975" dy="0">Supabase Auth</tspan>
-                    </text><text x="975" y="569" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="975" dy="0">[Sistema externo]</tspan>
-                    </text><text x="975" y="592" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="975" dy="0">Sesiones (JWT)</tspan>
-                    </text>
-                    <line x1="170" y1="134" x2="330" y2="210" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-47)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="225"
-                            y="172" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="225" dy="0">HTTPS</tspan>
-                        </text></g>
-                    <line x1="430" y1="134" x2="430" y2="210" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-47)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="460"
-                            y="176" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="460" dy="0">HTTPS</tspan>
-                        </text></g>
-                    <line x1="690" y1="134" x2="530" y2="210" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-47)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="640"
-                            y="172" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="640" dy="0">HTTPS</tspan>
-                        </text></g>
-                    <line x1="430" y1="330" x2="430" y2="395" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-47)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="510"
-                            y="356" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="510" dy="0">Server Actions</tspan>
-                            <tspan x="510" dy="15.525">(HTTPS · FormData)</tspan>
-                        </text></g>
-                    <line x1="330" y1="515" x2="260" y2="585" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-47)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="225"
-                            y="540" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="225" dy="0">SQL / RPC</tspan>
-                            <tspan x="225" dy="15.525">(PostgREST · HTTPS)</tspan>
-                        </text></g>
-                    <line x1="470" y1="665" x2="400" y2="665" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-47)" />
-                    <text x="435" y="655" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="435" dy="0">SQL</tspan>
-                    </text>
-                    <line x1="590" y1="262" x2="870" y2="262" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-47)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="730"
-                            y="252" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="730" dy="0">Abre la ruta</tspan>
-                        </text></g>
-                    <line x1="590" y1="300" x2="870" y2="410" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-47)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="735"
-                            y="330" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="735" dy="0">Sube foto comprimida</tspan>
-                            <tspan x="735" dy="15.525">(preset sin firma)</tspan>
-                        </text></g>
-                    <line x1="590" y1="470" x2="870" y2="570" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-47)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="735"
-                            y="506" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="735" dy="0">Valida la sesión</tspan>
-                        </text></g>
-
-                    <g font-size="12" fill="#94a3b8">
-                        <rect x="40" y="780" width="16" height="12" rx="3" fill="#1e3a8a" stroke="#60a5fa" /><text
-                            x="62" y="791">Persona</text>
-                        <rect x="135" y="780" width="16" height="12" rx="3" fill="#065f46" stroke="#34d399" /><text
-                            x="157" y="791">ResqApp</text>
-                        <rect x="235" y="780" width="16" height="12" rx="3" fill="#1e293b" stroke="#475569" /><text
-                            x="257" y="791">Sistema externo</text>
-                    </g>
-
-                </svg>
-            </div>
-
-            <div class="glass-card p-6 md:p-8">
-                <div class="flex flex-wrap items-baseline gap-3 mb-2"><span
-                        class="text-emerald-700 font-mono text-sm">Nivel 3</span>
-                    <h3 class="text-2xl font-semibold">Componentes del servidor de aplicación</h3>
-                </div>
-                <p class="text-slate-400 mb-6">Aquí se ven las tres capas por dentro. Las páginas invocan acciones
-                    (casos de uso); las acciones validan con los esquemas, aplican las reglas del dominio y usan los
-                    repositorios; los repositorios obtienen el cliente de base de datos de los proveedores. La línea
-                    roja marca lo prohibido: la presentación nunca salta directo a los datos.</p>
-                <svg viewBox="0 0 1100 820" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="C4 Nivel 3: componentes del servidor de aplicación"
-                    font-family="Outfit, 'Segoe UI', Arial, sans-serif" class="w-full h-auto">
-                    <defs>
-                        <marker id="fl-50" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
-                            orient="auto-start-reverse">
-                            <path d="M0 0L10 5L0 10z" fill="#94a3b8" />
-                        </marker>
-                    </defs>
-
-                    <rect x="300" y="14" width="260" height="80" rx="14" fill="#1e293b" stroke="#475569"
-                        stroke-width="2" /><text x="430" y="44" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="430" dy="0">Aplicación web</tspan>
-                    </text><text x="430" y="63" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="430" dy="0">[Contenedor: navegador]</tspan>
-                    </text>
-                    <rect x="30" y="120" width="810" height="650" rx="18" fill="none" stroke="#34d399"
-                        stroke-width="1.5" stroke-dasharray="8 6" />
-                    <text x="820" y="145" font-size="13" fill="#34d399" font-weight="700" text-anchor="end">
-                        <tspan x="820" dy="0">Servidor de aplicación [Contenedor: Next.js]</tspan>
-                    </text>
-                    <text x="800" y="178" font-size="11.5" fill="#60a5fa" font-weight="700" text-anchor="end">
-                        <tspan x="800" dy="0">CAPA DE PRESENTACIÓN</tspan>
-                    </text>
-                    <rect x="60" y="188" width="340" height="110" rx="14" fill="#172554" stroke="#60a5fa"
-                        stroke-width="2" /><text x="230" y="218" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="230" dy="0">Páginas y rutas</tspan>
-                    </text><text x="230" y="237" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="230" dy="0">[Componente: src/app]</tspan>
-                    </text><text x="230" y="260" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="230" dy="0">Inicio, detalle, publicar,</tspan>
-                        <tspan x="230" dy="16.875">chats y panel del comercio</tspan>
-                    </text>
-                    <rect x="460" y="188" width="340" height="110" rx="14" fill="#172554" stroke="#60a5fa"
-                        stroke-width="2" /><text x="630" y="218" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="630" dy="0">Componentes UI</tspan>
-                    </text><text x="630" y="237" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="630" dy="0">[Componente: src/components]</tspan>
-                    </text><text x="630" y="260" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="630" dy="0">Tarjeta de lote, buscador,</tspan>
-                        <tspan x="630" dy="16.875">selector de foto, navegación</tspan>
-                    </text>
-                    <text x="800" y="348" font-size="11.5" fill="#34d399" font-weight="700" text-anchor="end">
-                        <tspan x="800" dy="0">CAPA DE LÓGICA DE NEGOCIO</tspan>
-                    </text>
-                    <rect x="75" y="358" width="225" height="130" rx="14" fill="#065f46" stroke="#34d399"
-                        stroke-width="2" /><text x="187.5" y="388" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="187.5" dy="0">Acciones</tspan>
-                    </text><text x="187.5" y="407" font-size="11.5" fill="#94a3b8" font-weight="400"
-                        text-anchor="middle">
-                        <tspan x="187.5" dy="0">[Componente: lib/acciones]</tspan>
-                    </text><text x="187.5" y="430" font-size="12.5" fill="#cbd5e1" font-weight="400"
-                        text-anchor="middle">
-                        <tspan x="187.5" dy="0">Casos de uso:</tspan>
-                        <tspan x="187.5" dy="16.875">publicarLote, pedirApartado,</tspan>
-                        <tspan x="187.5" dy="16.875">registrarEntrega</tspan>
-                    </text>
-                    <rect x="320" y="358" width="230" height="130" rx="14" fill="#065f46" stroke="#34d399"
-                        stroke-width="2" /><text x="435" y="388" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="435" dy="0">Esquemas</tspan>
-                    </text><text x="435" y="407" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="435" dy="0">[Componente: lib/schemas · Zod]</tspan>
-                    </text><text x="435" y="430" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="435" dy="0">Validan toda entrada:</tspan>
-                        <tspan x="435" dy="16.875">descuento mínimo, fechas,</tspan>
-                        <tspan x="435" dy="16.875">nunca producto vencido</tspan>
-                    </text>
-                    <rect x="570" y="358" width="240" height="130" rx="14" fill="#065f46" stroke="#34d399"
-                        stroke-width="2" /><text x="690" y="388" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="690" dy="0">Dominio</tspan>
-                    </text><text x="690" y="407" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="690" dy="0">[Componente: lib/domain]</tspan>
-                    </text><text x="690" y="430" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="690" dy="0">Reglas puras: precio,</tspan>
-                        <tspan x="690" dy="16.875">vencimiento, relevancia</tspan>
-                        <tspan x="690" dy="16.875">e impacto (CO₂e)</tspan>
-                    </text>
-                    <text x="800" y="538" font-size="11.5" fill="#fb923c" font-weight="700" text-anchor="end">
-                        <tspan x="800" dy="0">CAPA DE ACCESO A DATOS</tspan>
-                    </text>
-                    <rect x="60" y="548" width="340" height="120" rx="14" fill="#431407" stroke="#fb923c"
-                        stroke-width="2" /><text x="230" y="578" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="230" dy="0">Repositorios</tspan>
-                    </text><text x="230" y="597" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="230" dy="0">[Componente: lib/repositories]</tspan>
-                    </text><text x="230" y="620" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="230" dy="0">lots, stores, reservations, impact</tspan>
-                        <tspan x="230" dy="16.875">Única frontera con la base de datos</tspan>
-                    </text>
-                    <rect x="460" y="548" width="340" height="120" rx="14" fill="#431407" stroke="#fb923c"
-                        stroke-width="2" /><text x="630" y="578" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="630" dy="0">Proveedores</tspan>
-                    </text><text x="630" y="597" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="630" dy="0">[Componente: lib/providers]</tspan>
-                    </text><text x="630" y="620" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                        <tspan x="630" dy="0">Cliente de BD del servidor</tspan>
-                        <tspan x="630" dy="16.875">y proveedor de imágenes</tspan>
-                    </text>
-                    <rect x="880" y="188" width="200" height="100" rx="14" fill="#1e293b" stroke="#475569"
-                        stroke-width="2" /><text x="980" y="218" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="980" dy="0">Cloudinary</tspan>
-                    </text><text x="980" y="237" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="980" dy="0">[Sistema externo]</tspan>
-                    </text>
-                    <rect x="880" y="368" width="200" height="100" rx="14" fill="#1e293b" stroke="#475569"
-                        stroke-width="2" /><text x="980" y="398" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="980" dy="0">Supabase Auth</tspan>
-                    </text><text x="980" y="417" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="980" dy="0">[Sistema externo]</tspan>
-                    </text>
-                    <path d="M880 554 Q880 540 980 540 Q1080 540 1080 554 V666 Q1080 680 980 680 Q880 680 880 666 Z"
-                        fill="#065f46" stroke="#34d399" stroke-width="2" />
-                    <path d="M880 554 Q880 568 980 568 Q1080 568 1080 554" fill="none" stroke="#34d399"
-                        stroke-width="2" /><text x="980" y="590" font-size="16" fill="#e2e8f0" font-weight="700"
-                        text-anchor="middle">
-                        <tspan x="980" dy="0">Base de datos</tspan>
-                    </text><text x="980" y="609" font-size="11.5" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="980" dy="0">[PostgreSQL + PostGIS]</tspan>
-                    </text>
-                    <line x1="430" y1="94" x2="260" y2="188" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-50)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="360"
-                            y="108" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="start">
-                            <tspan x="360" dy="0">Solicita página</tspan>
-                        </text></g>
-                    <line x1="400" y1="243" x2="460" y2="243" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-50)" />
-                    <line x1="200" y1="298" x2="185" y2="358" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-50)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="205"
-                            y="332" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="start">
-                            <tspan x="205" dy="0">Invoca (Server Action)</tspan>
-                        </text></g>
-                    <line x1="300" y1="423" x2="320" y2="423" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-50)" />
-                    <text x="300" y="510" font-size="11" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="300" dy="0">valida</tspan>
-                    </text>
-                    <line x1="550" y1="423" x2="570" y2="423" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-50)" />
-                    <text x="560" y="510" font-size="11" fill="#94a3b8" font-weight="400" text-anchor="middle">
-                        <tspan x="560" dy="0">aplica reglas</tspan>
-                    </text>
-                    <line x1="185" y1="488" x2="205" y2="548" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-50)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="212"
-                            y="522" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="start">
-                            <tspan x="212" dy="0">Consulta / guarda</tspan>
-                        </text></g>
-                    <line x1="400" y1="608" x2="460" y2="608" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-50)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="430"
-                            y="590" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="430" dy="0">obtiene</tspan>
-                            <tspan x="430" dy="15.525">cliente</tspan>
-                        </text></g>
-                    <line x1="800" y1="630" x2="880" y2="620" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-50)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="840"
-                            y="604" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="840" dy="0">SQL / RPC</tspan>
-                        </text></g>
-                    <line x1="740" y1="548" x2="880" y2="440" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-50)" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="830"
-                            y="505" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="830" dy="0">Sesión</tspan>
-                        </text></g>
-                    <line x1="720" y1="548" x2="900" y2="288" stroke="#94a3b8" stroke-width="1.8"
-                        marker-end="url(#fl-50)" stroke-dasharray="6 5" />
-                    <g paint-order="stroke" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"><text x="790"
-                            y="330" font-size="11.5" fill="#cbd5e1" font-weight="400" text-anchor="middle">
-                            <tspan x="790" dy="0">URLs de fotos</tspan>
-                        </text></g>
-                    <path d="M110 298 C 20 400, 20 520, 90 548" fill="none" stroke="#f87171" stroke-width="2"
-                        stroke-dasharray="5 5" />
-                    <g transform="translate(38,430)">
-                        <circle r="13" fill="#0f172a" stroke="#f87171" stroke-width="2" />
-                        <path d="M-5 -5 L5 5 M5 -5 L-5 5" stroke="#f87171" stroke-width="2.5" />
-                    </g>
-                    <text x="60" y="745" font-size="12.5" fill="#f87171" font-weight="400" text-anchor="start">
-                        <tspan x="60" dy="0">Regla de ESLint: las páginas y los componentes NO pueden importar la base
-                            de datos (línea roja). Si alguien lo intenta, la compilación falla.</tspan>
-                    </text>
-                    <text x="60" y="800" font-size="12" fill="#94a3b8" font-weight="400" text-anchor="start">
-                        <tspan x="60" dy="0">Leyenda: azul = presentación · verde = lógica de negocio · naranja = acceso
-                            a datos · gris = sistema externo</tspan>
-                    </text>
-
-                </svg>
-            </div>
-
-
-            <div class="navegacion-pie flex justify-between items-center gap-4 mt-16 pt-8 border-t border-slate-800">
-                <a href="#p6"
-                    class="px-5 py-3 rounded-xl glass-card text-slate-300 hover:text-emerald-700 transition-colors">← 06
-                    · Arquitectura</a>
-                <span class="text-slate-600 text-sm">07 / 11</span>
-                <a href="#p8"
-                    class="px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold hover:-translate-y-0.5 transition-all">08
-                    · Prototipo →</a>
-            </div>
-        </section>
-
-        <!-- ═════════ PÁGINA 08 · PROTOTIPO ═════════ -->
+    <!-- Nivel 1: Contexto -->
+    <div class="glass-card p-6 md:p-8 mb-12">
+        <div class="flex flex-wrap items-baseline gap-3 mb-2">
+            <span class="text-emerald-600 font-mono text-sm font-bold bg-emerald-100 px-2 py-1 rounded">Nivel 1</span>
+            <h3 class="text-2xl font-semibold text-slate-800">Contexto del sistema</h3>
+        </div>
+        <p class="text-slate-500 mb-8">Interacción a alto nivel entre los usuarios, nuestra plataforma y los sistemas externos.</p>
         
+        <div class="flex flex-col items-center gap-8 bg-slate-50 p-8 rounded-2xl border border-slate-200">
+            <!-- Usuarios -->
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="w-48 p-4 rounded-xl bg-blue-700 text-white text-center shadow-md">
+                    <p class="font-bold">Vecino</p>
+                    <p class="text-[10px] text-blue-200">[Persona]</p>
+                    <p class="text-xs mt-2 leading-tight">Busca y aparta productos baratos para evitar su desperdicio.</p>
+                </div>
+                <div class="w-48 p-4 rounded-xl bg-blue-700 text-white text-center shadow-md">
+                    <p class="font-bold">Comercio</p>
+                    <p class="text-[10px] text-blue-200">[Persona]</p>
+                    <p class="text-xs mt-2 leading-tight">Publica el inventario próximo a vencer con descuento.</p>
+                </div>
+                <div class="w-48 p-4 rounded-xl bg-blue-700 text-white text-center shadow-md">
+                    <p class="font-bold">Administrador</p>
+                    <p class="text-[10px] text-blue-200">[Persona]</p>
+                    <p class="text-xs mt-2 leading-tight">Verifica comercios y modera el contenido.</p>
+                </div>
+            </div>
+
+            <!-- Flechas -->
+            <div class="flex justify-center text-slate-400 text-2xl font-bold">⬇</div>
+
+            <!-- Sistema Central -->
+            <div class="w-full max-w-2xl p-6 rounded-2xl bg-emerald-700 text-white text-center shadow-xl border-4 border-emerald-600">
+                <h4 class="text-2xl font-bold">ResqApp</h4>
+                <p class="text-xs text-emerald-200 mb-2">[Sistema de Software]</p>
+                <p class="text-sm">Plataforma de microservicios que conecta comercios con vecinos y mide el impacto medioambiental (CO₂).</p>
+            </div>
+
+            <!-- Flechas -->
+            <div class="flex justify-center text-slate-400 text-2xl font-bold">⬇</div>
+
+            <!-- Sistemas Externos -->
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="w-48 p-4 rounded-xl bg-slate-700 text-white text-center shadow-md">
+                    <p class="font-bold">AWS Cognito</p>
+                    <p class="text-[10px] text-slate-300">[Sistema Externo]</p>
+                    <p class="text-xs mt-2 leading-tight">Gestión de identidades y autenticación.</p>
+                </div>
+                <div class="w-48 p-4 rounded-xl bg-slate-700 text-white text-center shadow-md">
+                    <p class="font-bold">Google Maps</p>
+                    <p class="text-[10px] text-slate-300">[Sistema Externo]</p>
+                    <p class="text-xs mt-2 leading-tight">Geolocalización de comercios y rutas.</p>
+                </div>
+                <div class="w-48 p-4 rounded-xl bg-slate-700 text-white text-center shadow-md">
+                    <p class="font-bold">Cloudinary</p>
+                    <p class="text-[10px] text-slate-300">[Sistema Externo]</p>
+                    <p class="text-xs mt-2 leading-tight">Almacenamiento y optimización de imágenes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nivel 2: Contenedores -->
+    <div class="glass-card p-6 md:p-8 mb-12">
+        <div class="flex flex-wrap items-baseline gap-3 mb-2">
+            <span class="text-blue-600 font-mono text-sm font-bold bg-blue-100 px-2 py-1 rounded">Nivel 2</span>
+            <h3 class="text-2xl font-semibold text-slate-800">Contenedores</h3>
+        </div>
+        <p class="text-slate-500 mb-8">Zoom dentro del bloque "ResqApp". Se aprecian las aplicaciones cliente interactuando con el Gateway, los microservicios y el bus de eventos.</p>
+        
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 overflow-x-auto">
+            <div class="min-w-[850px] flex flex-col items-center gap-6">
+                
+                <!-- Clientes -->
+                <div class="flex justify-center gap-12 w-full mb-2">
+                    <div class="w-56 p-4 rounded-xl bg-blue-600 text-white text-center shadow-md">
+                        <p class="font-bold">App Móvil (React Native)</p>
+                        <p class="text-[10px] text-blue-200">[Contenedor: Mobile App]</p>
+                        <p class="text-xs mt-1">Interfaz para vecinos (compradores).</p>
+                    </div>
+                    <div class="w-56 p-4 rounded-xl bg-blue-600 text-white text-center shadow-md">
+                        <p class="font-bold">App Web (Next.js)</p>
+                        <p class="text-[10px] text-blue-200">[Contenedor: SPA]</p>
+                        <p class="text-xs mt-1">Interfaz y panel para comercios.</p>
+                    </div>
+                </div>
+
+                <div class="text-slate-400 text-xl font-bold">⬇ REST / WebSockets ⬇</div>
+
+                <!-- API Gateway -->
+                <div class="w-3/4 p-3 rounded-xl bg-slate-800 text-white text-center shadow-lg">
+                    <p class="font-bold text-lg">API Gateway (Kong)</p>
+                    <p class="text-[11px] text-slate-300">Enrutamiento, SSL, Rate Limiting</p>
+                </div>
+
+                <!-- Microservicios -->
+                <div class="grid grid-cols-4 gap-4 w-full mt-2">
+                    <div class="p-4 rounded-xl bg-emerald-600 text-white text-center shadow-md flex flex-col justify-between">
+                        <div>
+                            <p class="font-bold">Auth Service</p>
+                            <p class="text-[10px] text-emerald-200">[Microservicio: Node.js]</p>
+                            <p class="text-xs mt-2">Roles, Permisos y Sesión.</p>
+                        </div>
+                        <div class="mt-4 p-2 bg-emerald-800 rounded text-xs">DB: Redis</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-emerald-600 text-white text-center shadow-md border-4 border-emerald-400 flex flex-col justify-between">
+                        <div>
+                            <p class="font-bold">Lots Service (Zoom)</p>
+                            <p class="text-[10px] text-emerald-200">[Microservicio: Spring Boot]</p>
+                            <p class="text-xs mt-2">Inventario, Precios y Fechas.</p>
+                        </div>
+                        <div class="mt-4 p-2 bg-emerald-800 rounded text-xs">DB: PostgreSQL</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-emerald-600 text-white text-center shadow-md flex flex-col justify-between">
+                        <div>
+                            <p class="font-bold">Chat Service</p>
+                            <p class="text-[10px] text-emerald-200">[Microservicio: Go]</p>
+                            <p class="text-xs mt-2">Mensajería en tiempo real.</p>
+                        </div>
+                        <div class="mt-4 p-2 bg-emerald-800 rounded text-xs">DB: MongoDB</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-emerald-600 text-white text-center shadow-md flex flex-col justify-between">
+                        <div>
+                            <p class="font-bold">Impact Service</p>
+                            <p class="text-[10px] text-emerald-200">[Microservicio: Python]</p>
+                            <p class="text-xs mt-2">Cálculo de CO₂ y analíticas.</p>
+                        </div>
+                        <div class="mt-4 p-2 bg-emerald-800 rounded text-xs">DB: PostgreSQL</div>
+                    </div>
+                </div>
+
+                <!-- Event Bus -->
+                <div class="w-full mt-2 p-3 rounded-xl border-2 border-orange-400 bg-orange-100 text-orange-900 text-center shadow-inner">
+                    <p class="font-bold">Event Bus (Kafka / RabbitMQ)</p>
+                    <p class="text-[11px] text-orange-700">Canal de comunicación asíncrono inter-servicios</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nivel 3: Componentes -->
+    <div class="glass-card p-6 md:p-8 mb-12">
+        <div class="flex flex-wrap items-baseline gap-3 mb-2">
+            <span class="text-purple-600 font-mono text-sm font-bold bg-purple-100 px-2 py-1 rounded">Nivel 3</span>
+            <h3 class="text-2xl font-semibold text-slate-800">Componentes (Zoom en Lots Service)</h3>
+        </div>
+        <p class="text-slate-500 mb-8">Zoom dentro del contenedor "Lots Service" mostrando su estructura interna basada en arquitectura limpia / hexagonal.</p>
+        
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                
+                <!-- Controller -->
+                <div class="w-48 p-4 bg-purple-700 text-white text-center rounded-xl shadow-md z-10">
+                    <p class="font-bold">LotController</p>
+                    <p class="text-[10px] text-purple-200">[Spring REST Controller]</p>
+                    <p class="text-xs mt-2 leading-tight">Expone endpoints HTTP genéricos para publicar lotes.</p>
+                </div>
+                
+                <div class="text-slate-400 text-2xl font-bold rotate-90 md:rotate-0">➡</div>
+                
+                <!-- Service / Domain -->
+                <div class="flex flex-col gap-4">
+                    <div class="w-56 p-4 bg-purple-600 text-white text-center rounded-xl shadow-md border-2 border-purple-400">
+                        <p class="font-bold">LotService</p>
+                        <p class="text-[10px] text-purple-200">[Business Logic Component]</p>
+                        <p class="text-xs mt-2 leading-tight">Valida que el descuento sea >10% y no esté vencido.</p>
+                    </div>
+                    <div class="w-56 p-4 bg-orange-500 text-white text-center rounded-xl shadow-md">
+                        <p class="font-bold">EventPublisher</p>
+                        <p class="text-[10px] text-orange-200">[Messaging Component]</p>
+                        <p class="text-xs mt-2 leading-tight">Publica "LotCreated" al Bus.</p>
+                    </div>
+                </div>
+
+                <div class="text-slate-400 text-2xl font-bold rotate-90 md:rotate-0">➡</div>
+                
+                <!-- Repository & DB -->
+                <div class="flex flex-col items-center gap-4">
+                    <div class="w-48 p-4 bg-purple-700 text-white text-center rounded-xl shadow-md">
+                        <p class="font-bold">LotRepository</p>
+                        <p class="text-[10px] text-purple-200">[Spring Data JPA]</p>
+                        <p class="text-xs mt-2 leading-tight">Mapeo O/R y acceso a datos.</p>
+                    </div>
+                    <div class="w-16 h-12 rounded-lg border-2 border-slate-400 bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-600 shadow-inner">
+                        PgSQL
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="navegacion-pie flex justify-between items-center gap-4 mt-16 pt-8 border-t border-slate-200">
+        <a href="#p6" class="px-5 py-3 rounded-xl glass-card text-slate-600 hover:text-emerald-700 transition-colors">← 06 · Arquitectura</a>
+        <span class="text-slate-500 text-sm font-medium">07 / 08</span>
+        <a href="#p8" class="px-5 py-3 rounded-xl bg-emerald-600 text-white font-semibold hover:-translate-y-0.5 transition-all shadow-md shadow-emerald-500/20">08 · Prototipo →</a>
+    </div>
+</section>
