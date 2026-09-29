@@ -141,21 +141,13 @@ loteSchema = z.object({ ... })
 }</pre>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-            <div class="glass-card p-6 border border-emerald-500/20 text-center relative overflow-hidden group">
-                <div class="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-colors"></div>
-                <div class="w-full h-32 bg-slate-800/80 rounded-lg border border-slate-700 flex flex-col items-center justify-center mb-3">
-                    <svg class="w-8 h-8 text-emerald-400 mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    <span class="text-xs text-slate-500 uppercase tracking-widest">Interfaz: Publicar Lote</span>
-                </div>
-                <p class="text-emerald-400 font-semibold text-sm">Descuento calculado en vivo (50%)</p>
+            <div class="pendiente p-6 text-center text-sm">
+                <p class="text-orange-300 font-semibold">📸 Captura: formulario de publicación</p>
+                <p class="text-slate-500">con el descuento calculado en vivo</p>
             </div>
-            <div class="glass-card p-6 border border-red-500/20 text-center relative overflow-hidden group">
-                <div class="absolute inset-0 bg-red-500/5 group-hover:bg-red-500/10 transition-colors"></div>
-                <div class="w-full h-32 bg-slate-800/80 rounded-lg border border-slate-700 flex flex-col items-center justify-center mb-3">
-                    <svg class="w-8 h-8 text-red-400 mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                    <span class="text-xs text-slate-500 uppercase tracking-widest">Alerta de Validación</span>
-                </div>
-                <p class="text-red-400 font-semibold text-sm">Error Zod: Producto ya vencido</p>
+            <div class="pendiente p-6 text-center text-sm">
+                <p class="text-orange-300 font-semibold">📸 Captura: el sistema rechaza un producto vencido</p>
+                <p class="text-slate-500">mensaje de error del esquema</p>
             </div>
         </div>
     </div>
@@ -206,23 +198,14 @@ loteSchema = z.object({ ... })
   <span class="k">insert into</span> impact_ledger (kg_rescatados, co2e_evitado_kg, bs_ahorrados, ...) ...;
 <span class="k">end</span> $$;</pre>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-            <div class="glass-card p-5 border border-blue-500/20 text-center">
-                <div class="w-full h-24 bg-slate-800/80 rounded border border-slate-700 flex items-center justify-center mb-3">
-                    <span class="text-[10px] text-slate-500 uppercase">Interfaz de Chat</span>
-                </div>
-                <p class="text-blue-300 font-semibold text-xs">Chat en tiempo real</p>
+            <div class="pendiente p-6 text-center text-sm">
+                <p class="text-orange-300 font-semibold">📸 Chat cliente–comercio</p>
             </div>
-            <div class="glass-card p-5 border border-emerald-500/20 text-center">
-                <div class="w-full h-24 bg-slate-800/80 rounded border border-slate-700 flex items-center justify-center mb-3">
-                    <span class="text-[10px] text-slate-500 uppercase">Panel de Comercio</span>
-                </div>
-                <p class="text-emerald-400 font-semibold text-xs">Confirmar entrega</p>
+            <div class="pendiente p-6 text-center text-sm">
+                <p class="text-orange-300 font-semibold">📸 Panel: registrar entrega</p>
             </div>
-            <div class="glass-card p-5 border border-emerald-500/40 text-center bg-emerald-900/10">
-                <div class="w-full h-24 bg-slate-800/80 rounded border border-slate-700 flex items-center justify-center mb-3">
-                    <span class="text-[10px] text-slate-500 uppercase">Dashboard de Impacto</span>
-                </div>
-                <p class="text-emerald-300 font-semibold text-xs">Métricas de Kg y CO₂e</p>
+            <div class="pendiente p-6 text-center text-sm">
+                <p class="text-orange-300 font-semibold">📸 Panel de impacto actualizado</p>
             </div>
         </div>
     </div>
@@ -244,13 +227,11 @@ loteSchema = z.object({ ... })
                         de producción sin errores.</span></li>
             </ul>
         </div>
-        <div class="glass-card p-7 flex flex-col items-center justify-center text-center border border-indigo-500/30 relative overflow-hidden group">
-            <div class="absolute inset-0 bg-indigo-500/5 group-hover:bg-indigo-500/10 transition-colors"></div>
-            <div class="w-16 h-16 rounded-full bg-indigo-500/20 flex items-center justify-center mb-4">
-                <svg class="w-8 h-8 text-indigo-400 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
-            </div>
-            <p class="text-indigo-300 font-bold text-lg mb-2">Video de demostración E2E</p>
-            <p class="text-slate-400 text-sm max-w-sm">Prueba de integración End-to-End ejecutada con éxito. El flujo completo desde la publicación hasta la recolección funciona perfectamente.</p>
+        <div class="pendiente p-7 flex flex-col justify-center text-center">
+            <p class="text-4xl mb-3">🎬</p>
+            <p class="text-orange-300 font-semibold mb-1">Video corto de ejecución</p>
+            <p class="text-slate-400 text-sm">Demostración de los dos módulos y de la prueba de integración (se
+                agrega al terminar la adaptación de ResqApp).</p>
         </div>
     </div>
 
