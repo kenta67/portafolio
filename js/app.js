@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     for (const sec of sections) {
         try {
-            const response = await fetch(`src/sections/${sec}.html`);
+            const response = await fetch(`src/sections/${sec}.html?v=${new Date().getTime()}`);
             if (response.ok) {
                 const html = await response.text();
                 mainContent.innerHTML += html;
