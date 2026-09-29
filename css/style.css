@@ -195,7 +195,7 @@ body {
             gap: .4rem;
             padding: .45rem .8rem;
             border-radius: .7rem;
-            color: #cbd5e1;
+            color: #475569;
             white-space: nowrap;
             transition: all .2s;
         }
@@ -203,22 +203,22 @@ body {
         .nav-p span {
             font-family: 'JetBrains Mono', monospace;
             font-size: .7rem;
-            color: #64748b;
+            color: #94a3b8;
         }
 
         .nav-p:hover {
-            color: #6ee7b7;
+            color: #059669;
             background: rgba(16, 185, 129, .08);
         }
 
         .nav-p.activa {
-            color: #6ee7b7;
+            color: #059669;
             background: rgba(16, 185, 129, .14);
             box-shadow: inset 0 0 0 1px rgba(52, 211, 153, .3);
         }
 
         .nav-p.activa span {
-            color: #34d399;
+            color: #10b981;
         }
 
         .pagina {

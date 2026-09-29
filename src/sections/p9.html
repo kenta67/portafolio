@@ -11,27 +11,27 @@
         <div class="glass-card p-7">
             <h3 class="text-xl font-semibold mb-5">Tecnologías</h3>
             <div class="grid grid-cols-2 gap-3 text-sm">
-                <div class="rounded-lg bg-slate-800/60 border border-slate-700 p-3"><b class="text-blue-300">Next.js 16
+                <div class="rounded-lg bg-slate-800/60 border border-slate-700 p-3"><b class="text-blue-700">Next.js 16
                         + React 19</b>
                     <p class="text-slate-400 text-xs mt-1">Presentación y servidor</p>
                 </div>
                 <div class="rounded-lg bg-slate-800/60 border border-slate-700 p-3"><b
-                        class="text-blue-300">TypeScript</b>
+                        class="text-blue-700">TypeScript</b>
                     <p class="text-slate-400 text-xs mt-1">Tipado en todo el proyecto</p>
                 </div>
-                <div class="rounded-lg bg-slate-800/60 border border-slate-700 p-3"><b class="text-blue-300">Tailwind
+                <div class="rounded-lg bg-slate-800/60 border border-slate-700 p-3"><b class="text-blue-700">Tailwind
                         CSS 4</b>
                     <p class="text-slate-400 text-xs mt-1">Estilos, prioridad móvil</p>
                 </div>
-                <div class="rounded-lg bg-slate-800/60 border border-slate-700 p-3"><b class="text-emerald-300">Zod</b>
+                <div class="rounded-lg bg-slate-800/60 border border-slate-700 p-3"><b class="text-emerald-700">Zod</b>
                     <p class="text-slate-400 text-xs mt-1">Validación de entradas</p>
                 </div>
                 <div class="rounded-lg bg-slate-800/60 border border-slate-700 p-3"><b
-                        class="text-orange-300">PostgreSQL + PostGIS</b>
+                        class="text-orange-700">PostgreSQL + PostGIS</b>
                     <p class="text-slate-400 text-xs mt-1">Datos y consultas geográficas</p>
                 </div>
                 <div class="rounded-lg bg-slate-800/60 border border-slate-700 p-3"><b
-                        class="text-orange-300">Supabase</b>
+                        class="text-orange-700">Supabase</b>
                     <p class="text-slate-400 text-xs mt-1">Base de datos y autenticación</p>
                 </div>
                 <div class="rounded-lg bg-slate-800/60 border border-slate-700 p-3"><b
@@ -93,17 +93,17 @@
             tres capas, y en cada una hay una barrera contra el producto vencido.</p>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mb-8 text-sm">
             <div class="rounded-xl p-4 bg-blue-500/10 border border-blue-500/30">
-                <p class="text-blue-300 font-semibold mb-1">1 · Presentación</p>
+                <p class="text-blue-700 font-semibold mb-1">1 · Presentación</p>
                 <p class="text-slate-300">Formulario <code>comercio/publicar</code>: foto comprimida, descuento
                     en vivo.</p>
             </div>
             <div class="rounded-xl p-4 bg-emerald-500/10 border border-emerald-500/30">
-                <p class="text-emerald-300 font-semibold mb-1">2 · Lógica</p>
+                <p class="text-emerald-700 font-semibold mb-1">2 · Lógica</p>
                 <p class="text-slate-300">Acción <code>publicarLote()</code> valida con <code>loteSchema</code>:
                     descuento ≥ 10 %, nunca vencido.</p>
             </div>
             <div class="rounded-xl p-4 bg-orange-500/10 border border-orange-500/30">
-                <p class="text-orange-300 font-semibold mb-1">3 · Datos</p>
+                <p class="text-orange-700 font-semibold mb-1">3 · Datos</p>
                 <p class="text-slate-300">Repositorio <code>crearLote()</code> inserta en
                     <code>rescue_lots</code>.
                 </p>
@@ -142,11 +142,11 @@ loteSchema = z.object({ ... })
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
             <div class="pendiente p-6 text-center text-sm">
-                <p class="text-orange-300 font-semibold">📸 Captura: formulario de publicación</p>
+                <p class="text-orange-700 font-semibold">📸 Captura: formulario de publicación</p>
                 <p class="text-slate-500">con el descuento calculado en vivo</p>
             </div>
             <div class="pendiente p-6 text-center text-sm">
-                <p class="text-orange-300 font-semibold">📸 Captura: el sistema rechaza un producto vencido</p>
+                <p class="text-orange-700 font-semibold">📸 Captura: el sistema rechaza un producto vencido</p>
                 <p class="text-slate-500">mensaje de error del esquema</p>
             </div>
         </div>
@@ -179,7 +179,7 @@ loteSchema = z.object({ ... })
             </div>
             <div class="hidden md:flex items-center text-slate-600">→</div>
             <div class="flex-1 rounded-xl p-4 bg-emerald-500/10 border border-emerald-500/40">
-                <p class="font-semibold text-emerald-300">🌱 Impacto</p>
+                <p class="font-semibold text-emerald-700">🌱 Impacto</p>
                 <p class="text-slate-300">kg, CO₂e y Bs en el libro de impacto</p>
             </div>
         </div>
@@ -199,13 +199,13 @@ loteSchema = z.object({ ... })
 <span class="k">end</span> $$;</pre>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <div class="pendiente p-6 text-center text-sm">
-                <p class="text-orange-300 font-semibold">📸 Chat cliente–comercio</p>
+                <p class="text-orange-700 font-semibold">📸 Chat cliente–comercio</p>
             </div>
             <div class="pendiente p-6 text-center text-sm">
-                <p class="text-orange-300 font-semibold">📸 Panel: registrar entrega</p>
+                <p class="text-orange-700 font-semibold">📸 Panel: registrar entrega</p>
             </div>
             <div class="pendiente p-6 text-center text-sm">
-                <p class="text-orange-300 font-semibold">📸 Panel de impacto actualizado</p>
+                <p class="text-orange-700 font-semibold">📸 Panel de impacto actualizado</p>
             </div>
         </div>
     </div>
@@ -214,22 +214,22 @@ loteSchema = z.object({ ... })
         <div class="glass-card p-7">
             <h3 class="text-xl font-semibold mb-4">Verificación</h3>
             <ul class="text-sm text-slate-300 space-y-3">
-                <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b>Pruebas unitarias del
+                <li class="flex gap-3"><span class="text-emerald-700">✓</span><span><b>Pruebas unitarias del
                             dominio</b> (precio, vencimiento, relevancia, apartados) con Vitest, sin levantar la
                         base de datos.</span></li>
-                <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b>Prueba de integración</b>
+                <li class="flex gap-3"><span class="text-emerald-700">✓</span><span><b>Prueba de integración</b>
                         que recorre el flujo completo contra la base real: publicar, rechazar vencido,
                         preguntar, apartar y entregar.</span></li>
-                <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b>Prueba de
+                <li class="flex gap-3"><span class="text-emerald-700">✓</span><span><b>Prueba de
                             concurrencia:</b> dos entregas simultáneas de la última unidad; solo una se
                         registra.</span></li>
-                <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b>Lint, tipos y build</b>
+                <li class="flex gap-3"><span class="text-emerald-700">✓</span><span><b>Lint, tipos y build</b>
                         de producción sin errores.</span></li>
             </ul>
         </div>
         <div class="pendiente p-7 flex flex-col justify-center text-center">
             <p class="text-4xl mb-3">🎬</p>
-            <p class="text-orange-300 font-semibold mb-1">Video corto de ejecución</p>
+            <p class="text-orange-700 font-semibold mb-1">Video corto de ejecución</p>
             <p class="text-slate-400 text-sm">Demostración de los dos módulos y de la prueba de integración (se
                 agrega al terminar la adaptación de ResqApp).</p>
         </div>
@@ -237,7 +237,7 @@ loteSchema = z.object({ ... })
 
 
     <div class="navegacion-pie flex justify-between items-center gap-4 mt-16 pt-8 border-t border-slate-800">
-        <a href="#p8" class="px-5 py-3 rounded-xl glass-card text-slate-300 hover:text-emerald-300 transition-colors">←
+        <a href="#p8" class="px-5 py-3 rounded-xl glass-card text-slate-300 hover:text-emerald-700 transition-colors">←
             08
             · Prototipo</a>
         <span class="text-slate-600 text-sm">09 / 11</span>
